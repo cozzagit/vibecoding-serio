@@ -21,3 +21,8 @@ node_modules/
 # Typst cache
 .typst-cache/
 *.typ.bak
+
+# PDF build artifacts
+pdf/build/
+pdf/output/preview-*.png
+pdf/output/cover-preview-*.png

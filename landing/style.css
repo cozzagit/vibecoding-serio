@@ -98,6 +98,31 @@ em { font-style: italic; color: var(--accent-soft); font-weight: 600; }
     radial-gradient(ellipse 60% 40% at 80% 30%, rgba(255, 122, 61, 0.10), transparent 60%);
   text-align: left;
 }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-cover { order: -1; max-width: 280px; margin: 0 auto; }
+}
+.hero-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.5),
+    0 32px 64px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
+.hero-cover img:hover {
+  transform: rotate(0deg) scale(1.02);
+}
 .badge {
   display: inline-block;
   background: var(--bg-card);
