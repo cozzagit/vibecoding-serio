@@ -57,37 +57,44 @@
     hyphenate: true,
   )
 
+  // Increased leading for breathing room
   set par(
-    leading: 0.72em,
+    leading: 0.85em,
     first-line-indent: 0pt,
     justify: true,
+    spacing: 1.4em,
   )
 
-  // Heading styles
+  // Block / paragraph spacing — generous, key for readability
+  show par: set block(spacing: 1.3em)
+
+  // Heading styles — generous breathing
   show heading: set text(font: heading-font, weight: 700, fill: ink)
+  show heading: set block(above: 1.6em, below: 0.9em)
+
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
-    v(2cm)
-    text(size: 26pt, weight: 700, tracking: -0.5pt)[#it.body]
-    v(0.6em)
+    v(1.5cm)
+    text(size: 28pt, weight: 700, tracking: -0.5pt)[#it.body]
+    v(0.5em)
     line(length: 30%, stroke: 1.2pt + ink)
     v(1.2cm)
   }
-  show heading.where(level: 2): it => {
-    v(1.2em, weak: true)
-    block(text(size: 18pt, weight: 700, tracking: -0.3pt)[#it.body])
-    v(0.4em, weak: true)
-  }
-  show heading.where(level: 3): it => {
-    v(0.8em, weak: true)
-    block(text(size: 13pt, weight: 700, fill: ink)[#it.body])
-    v(0.2em, weak: true)
-  }
-  show heading.where(level: 4): it => {
-    v(0.6em, weak: true)
-    block(text(size: 11pt, weight: 700, fill: accent-amber)[#it.body])
-    v(0.1em, weak: true)
-  }
+  show heading.where(level: 2): it => block(
+    above: 2.6em,
+    below: 1.1em,
+    text(size: 19pt, weight: 700, tracking: -0.3pt)[#it.body],
+  )
+  show heading.where(level: 3): it => block(
+    above: 2em,
+    below: 0.9em,
+    text(size: 13.5pt, weight: 700, fill: ink, tracking: -0.1pt)[#it.body],
+  )
+  show heading.where(level: 4): it => block(
+    above: 1.6em,
+    below: 0.7em,
+    text(size: 11pt, weight: 700, fill: accent-amber, tracking: 0.5pt)[#it.body],
+  )
 
   // Inline code
   show raw.where(block: false): it => box(
@@ -98,22 +105,32 @@
     text(font: mono-font, size: 0.88em, fill: rgb("#BE123C"))[#it.text],
   )
 
-  // Code blocks
+  // Code blocks with generous spacing around
   show raw.where(block: true): it => block(
     fill: code-bg,
     inset: (x: 14pt, y: 12pt),
     radius: 4pt,
     width: 100%,
-    text(font: mono-font, size: 9pt, fill: code-fg)[#it.text],
+    above: 1.4em,
+    below: 1.4em,
+    text(font: mono-font, size: 8.8pt, fill: code-fg)[#it.text],
   )
 
   // Strong / emphasis
   show strong: set text(weight: 700, fill: ink)
   show emph: set text(style: "italic", fill: ink)
 
-  // Lists
-  set list(indent: 1em, body-indent: 0.4em, marker: ([•], [◦], [▪]))
-  set enum(indent: 1em, body-indent: 0.4em)
+  // Lists with proper spacing
+  set list(indent: 1em, body-indent: 0.5em, marker: ([•], [◦], [▪]), spacing: 0.7em)
+  set enum(indent: 1em, body-indent: 0.5em, spacing: 0.7em)
+  show list: set block(above: 1.1em, below: 1.1em)
+  show enum: set block(above: 1.1em, below: 1.1em)
+  // List items breathe more
+  show list.item: it => block(above: 0.4em, below: 0.4em)[#it]
+  show enum.item: it => block(above: 0.4em, below: 0.4em)[#it]
+
+  // Tables with breathing
+  show table: set block(above: 1.4em, below: 1.4em)
 
   // Quote (blockquote / callout)
   show quote: it => block(
@@ -163,7 +180,7 @@
 
 // ===== HELPERS =====
 
-// Callout box: tip / warning / note
+// Callout box: tip / warning / note — with proper breathing
 #let callout(kind: "tip", body) = {
   let (color, bg-color, label) = if kind == "tip" {
     (accent-blue, rgb("#EFF6FF"), "SUGGERIMENTO")
@@ -182,13 +199,14 @@
   block(
     fill: bg-color,
     stroke: (left: 3pt + color),
-    inset: (x: 14pt, y: 10pt),
+    inset: (x: 14pt, y: 12pt),
     radius: 2pt,
     width: 100%,
-    spacing: 1em,
+    above: 1.4em,
+    below: 1.4em,
   )[
     #text(size: 8pt, weight: 700, fill: color, tracking: 1.5pt)[#label]
-    #v(2pt)
+    #v(4pt)
     #text(size: 10pt, fill: ink)[#body]
   ]
 }
