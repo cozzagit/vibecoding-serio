@@ -32,7 +32,7 @@
 #let book(
   title: "Vibecoding Serio",
   subtitle: "Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo",
-  author: "Luca Cozza",
+  author: "Lupo Carro",
   doc,
 ) = {
   set document(
@@ -316,7 +316,7 @@
       columns: (1fr, auto),
       align: (left + bottom, right + bottom),
       [
-        #text(size: 11pt, weight: 700, fill: ink)[Luca Cozza] #linebreak()
+        #text(size: 11pt, weight: 700, fill: ink)[Lupo Carro] #linebreak()
         #text(size: 9pt, fill: muted)[Edizione 1.0  ·  2026]
       ],
       [
@@ -344,7 +344,7 @@
     ma non capisce cosa sta costruendo.
   ]
   #v(1fr)
-  #text(size: 11pt, weight: 600)[Luca Cozza]
+  #text(size: 11pt, weight: 600)[Lupo Carro]
   #v(0.3cm)
   #text(size: 10pt, fill: muted)[Edizione 1.0 — 2026]
   #v(1cm)
@@ -363,7 +363,7 @@
     Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo. #linebreak()
     #linebreak()
     Edizione 1.0 — 2026 #linebreak()
-    © 2026 Luca Cozza. Tutti i diritti riservati. #linebreak()
+    © 2026 Lupo Carro. Tutti i diritti riservati. #linebreak()
     #linebreak()
     Composto in *Source Serif 4* per il testo, *Inter Tight* per i titoli, #linebreak()
     *JetBrains Mono* per il codice. #linebreak()

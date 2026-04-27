@@ -69,7 +69,7 @@ def main():
         '#show: book.with(',
         '  title: "Vibecoding Serio",',
         '  subtitle: "Il manuale per chi costruisce siti con l\'AI ma non capisce cosa sta costruendo",',
-        '  author: "Luca Cozza",',
+        '  author: "Lupo Carro",',
         ')',
         '',
         '// ===== FRONT MATTER =====',

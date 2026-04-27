@@ -10,7 +10,7 @@
 
 - **Titolo provvisorio**: Vibecoding Serio
 - **Sottotitolo**: Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo
-- **Autore**: Luca Cozza
+- **Autore**: Lupo Carro
 - **Lunghezza target**: ~165 pagine, 8-9 ore di lettura
 - **Formato**: PDF (Typst), versione lite EPUB su KDP
 - **Prezzo**: 29€ Standard / 4.99€ Lite KDP / 49€ Bundle Pro
