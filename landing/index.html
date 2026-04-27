@@ -10,9 +10,10 @@
   <meta property="og:description" content="Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vibecodingserio.vibecanyon.com">
+  <meta property="og:image" content="https://vibecodingserio.vibecanyon.com/book-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='75' text-anchor='middle' font-family='monospace'>{}</text></svg>">
 </head>
@@ -24,9 +25,9 @@
     <a href="#top" class="logo"><span class="logo-bracket">{</span> Vibecoding <em>Serio</em> <span class="logo-bracket">}</span></a>
     <ul class="nav-links">
       <li><a href="#contenuto">Contenuto</a></li>
-      <li><a href="#per-chi">Per chi</a></li>
+      <li><a href="#prova">Prova</a></li>
       <li><a href="#prezzo">Prezzo</a></li>
-      <li><a href="#preorder" class="btn-mini">Pre-order</a></li>
+      <li><a href="#preorder" class="btn-mini">Scarica sample</a></li>
     </ul>
   </div>
 </nav>
@@ -35,14 +36,23 @@
 <header id="top" class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <span class="badge">Manoscritto completo · In editing finale · Lancio giugno 2026</span>
-      <h1>Smetti di copiare prompt.<br><span class="accent">Inizia a capire cosa stai costruendo.</span></h1>
+      <span class="badge">
+        <span class="badge-dot"></span>
+        Manoscritto completo · 251 pagine · Lancio giugno 2026
+      </span>
+      <h1>
+        <span class="hero-title-1">Smetti di copiare prompt.</span>
+        <span class="hero-title-2">Inizia a capire <br>cosa stai costruendo.</span>
+      </h1>
       <p class="lead">
         Il manuale pratico in italiano per chi crea siti e app con <strong>Claude, Cursor, Bolt, Lovable</strong> — ma quando qualcosa si rompe non sa neanche dove guardare.
       </p>
       <div class="cta-group">
-        <a href="/vibecoding-serio-sample.pdf" class="btn btn-primary" download>📕 Scarica le prime 60 pagine</a>
-        <a href="#contenuto" class="btn btn-ghost">Vedi cosa c'è dentro ↓</a>
+        <a href="/vibecoding-serio-sample.pdf" class="btn btn-primary" download>
+          <span>Scarica le prime 60 pagine</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#prova" class="btn btn-ghost">Provalo prima ↓</a>
       </div>
       <div class="hero-stats">
         <div><strong>251</strong><span>pagine</span></div>
@@ -58,40 +68,181 @@
 </header>
 
 <!-- IL DOLORE -->
-<section class="problem">
+<section class="problem fade-in">
   <div class="container">
     <h2>Ti suona familiare?</h2>
     <div class="problem-grid">
       <div class="problem-card">
-        <span class="problem-icon">😅</span>
+        <div class="problem-emoji">😅</div>
         <p>Hai consegnato un sito al cliente. <strong>Qualcosa si è rotto in produzione</strong>, ma in localhost funzionava. Non sai da dove iniziare.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-icon">🤯</span>
+        <div class="problem-emoji">🤯</div>
         <p>Claude ti ha scritto 200 righe di codice. <strong>Non capisci cosa fanno</strong>, ma le hai messe online. E ora il login dimentica gli utenti.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-icon">😤</span>
+        <div class="problem-emoji">😤</div>
         <p>Apri la console e vedi <code>CORS policy blocked</code>. <strong>Non sai cosa significhi</strong>. Chiedi a Claude. Provi 5 fix che peggiorano la situazione.</p>
       </div>
       <div class="problem-card">
-        <span class="problem-icon">🫠</span>
+        <div class="problem-emoji">🫠</div>
         <p>Il cliente chiede di "cambiare l'header". <strong>Non sei sicuro di cosa sia un header</strong>, e il prompt che fai a Claude ti restituisce qualcosa che non c'entra.</p>
       </div>
     </div>
     <p class="problem-conclusion">
-      Non è colpa tua. <strong>Le AI hanno reso facilissimo costruire siti senza prima capire come funzionano.</strong> Questo manuale ti dà i fondamenti che ti mancano — quelli che separano un progetto fragile da uno che regge.
+      Non è colpa tua. <strong>Le AI hanno reso facilissimo costruire siti senza prima capire come funzionano.</strong><br>
+      Questo manuale ti dà i fondamenti che ti mancano — quelli che separano un progetto fragile da uno che regge.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- INTERACTIVE: HTTP STATUS CODE DECODER -->
+<!-- ============================================ -->
+<section id="prova" class="demo fade-in">
+  <div class="container">
+    <span class="section-tag">DEMO INTERATTIVA</span>
+    <h2>Prova subito un assaggio del libro</h2>
+    <p class="section-lead">Inserisci un codice di errore HTTP. Il libro ti spiega cos'è, dove guardare, e <strong>come parlarne a Claude</strong> per fixare in 1 iterazione invece di 8.</p>
+
+    <div class="decoder">
+      <div class="decoder-input">
+        <label for="status-input">Codice HTTP</label>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="status-input"
+            placeholder="es. 401, 500, 404…"
+            inputmode="numeric"
+            maxlength="3"
+            autocomplete="off">
+          <button id="decode-btn" class="btn btn-primary btn-decode">Decodifica</button>
+        </div>
+        <div class="decoder-suggestions">
+          <span class="suggestion-label">Prova:</span>
+          <button class="suggestion" data-code="401">401</button>
+          <button class="suggestion" data-code="404">404</button>
+          <button class="suggestion" data-code="429">429</button>
+          <button class="suggestion" data-code="500">500</button>
+          <button class="suggestion" data-code="502">502</button>
+          <button class="suggestion" data-code="200">200</button>
+        </div>
+      </div>
+
+      <div id="decoder-output" class="decoder-output decoder-empty">
+        <div class="decoder-placeholder">
+          <div class="placeholder-icon">⌨️</div>
+          <p>Digita un codice di errore HTTP qui sopra</p>
+          <p class="placeholder-hint">o clicca uno dei suggerimenti</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="demo-footer">
+      Tutto questo è già nel libro — <strong>solo 1 dei 130+ termini decifrati</strong>. Più infografiche, callout, prompt-ready, e i 9 moduli completi.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- INTERACTIVE: ANATOMIA PAGINA HOVERABLE -->
+<!-- ============================================ -->
+<section class="anatomia fade-in">
+  <div class="container">
+    <span class="section-tag">DEMO INTERATTIVA · MODULO 3</span>
+    <h2>Passa il mouse sulla pagina e scopri i nomi giusti</h2>
+    <p class="section-lead">Il vibecoder dice <em>"un menù che esce"</em>. Tu, dopo il libro, dici <strong>"un drawer mobile sticky in basso con shortcut alle azioni primarie"</strong>. Hover qui sotto:</p>
+
+    <div class="anatomy-wrapper">
+      <div class="anatomy-mockup" id="anatomy-mockup">
+        <!-- HEADER -->
+        <div class="anat-block anat-header" data-name="Header" data-desc="La fascia in cima alla pagina con logo, nav e CTA. Spesso sticky.">
+          <div class="anat-logo">LOGO</div>
+          <div class="anat-navlinks">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="anat-cta"></div>
+        </div>
+
+        <!-- NAV BAR sub -->
+        <div class="anat-block anat-nav" data-name="Navbar (sub)" data-desc="Barra di navigazione secondaria sotto l'header — link orizzontali ai sotto-livelli.">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="anat-row">
+          <!-- SIDEBAR -->
+          <div class="anat-block anat-sidebar" data-name="Sidebar" data-desc="Colonna laterale con filtri, indice, profilo. Su mobile diventa drawer.">
+            <div class="anat-side-title"></div>
+            <div class="anat-side-item"></div>
+            <div class="anat-side-item"></div>
+            <div class="anat-side-item"></div>
+            <div class="anat-side-title"></div>
+            <div class="anat-side-item"></div>
+            <div class="anat-side-item"></div>
+          </div>
+
+          <!-- MAIN -->
+          <div class="anat-main">
+            <!-- BREADCRUMB -->
+            <div class="anat-block anat-breadcrumb" data-name="Breadcrumb" data-desc="Traccia 'sei qui': Home > Categoria > Sotto > Pagina. Aiuta a tornare indietro.">
+              <span></span><span></span><span></span>
+            </div>
+            <!-- HERO -->
+            <div class="anat-block anat-hero" data-name="Hero" data-desc="Banda alta sopra la fold: titolo grande, sottotitolo, CTA primaria. La prima impressione.">
+              <div class="anat-h1"></div>
+              <div class="anat-sub"></div>
+              <div class="anat-hero-cta"></div>
+            </div>
+            <!-- GRID di CARD -->
+            <div class="anat-block anat-grid" data-name="Grid di Card" data-desc="Griglia 2D di card prodotto. Su mobile collassa in 1 colonna.">
+              <div class="anat-card">
+                <div class="anat-card-img"></div>
+                <div class="anat-card-title"></div>
+                <div class="anat-card-cta"></div>
+              </div>
+              <div class="anat-card">
+                <div class="anat-card-img"></div>
+                <div class="anat-card-title"></div>
+                <div class="anat-card-cta"></div>
+              </div>
+              <div class="anat-card">
+                <div class="anat-card-img"></div>
+                <div class="anat-card-title"></div>
+                <div class="anat-card-cta"></div>
+              </div>
+            </div>
+            <!-- PAGINATION -->
+            <div class="anat-block anat-pagination" data-name="Pagination" data-desc="« 1 2 3 ... » — sfoglia liste lunghe a blocchi.">
+              <span class="active"></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="anat-block anat-footer" data-name="Footer" data-desc="La fascia in fondo: link legali, social, copyright, newsletter signup.">
+          <div></div><div></div><div></div>
+        </div>
+      </div>
+
+      <div class="anatomy-tooltip" id="anatomy-tooltip">
+        <div class="tt-name">Hover su un elemento</div>
+        <div class="tt-desc">Passa il mouse sopra una zona della pagina-tipo per scoprire il suo nome corretto + come usarlo nel prompt a Claude.</div>
+      </div>
+    </div>
+
+    <p class="demo-footer">
+      <strong>Modulo 3 — L'anatomia di una pagina web</strong> spiega tutti i 50+ componenti UI con metafore, prompt-ready, e l'infografica poster A2 stampabile.
     </p>
   </div>
 </section>
 
 <!-- PER CHI -->
-<section id="per-chi" class="audience">
+<section id="per-chi" class="audience fade-in">
   <div class="container">
     <h2>Per chi è (e per chi non è)</h2>
     <div class="audience-grid">
       <div class="audience-yes">
-        <h3>✅ È per te se…</h3>
+        <h3>È per te se…</h3>
         <ul>
           <li>Hai creato qualcosa con un'AI ma non sai spiegare come è fatto</li>
           <li>Sei un freelancer / founder solo che vende siti o automazioni a clienti reali</li>
@@ -101,12 +252,12 @@
         </ul>
       </div>
       <div class="audience-no">
-        <h3>❌ NON è per te se…</h3>
+        <h3>NON è per te se…</h3>
         <ul>
           <li>Sei già uno sviluppatore senior — questo libro ti annoierebbe</li>
           <li>Vuoi un corso "diventa programmatore in 30 giorni"</li>
           <li>Cerchi tutorial passo-passo su un singolo framework</li>
-          <li>Vuoi scrivere codice senza capire l'architettura sottostante (allora rimani col vibecoding ingenuo)</li>
+          <li>Vuoi scrivere codice senza capire l'architettura sottostante</li>
         </ul>
       </div>
     </div>
@@ -114,74 +265,127 @@
 </section>
 
 <!-- COSA IMPARI -->
-<section id="contenuto" class="content">
+<section id="contenuto" class="content fade-in">
   <div class="container">
+    <span class="section-tag">CONTENUTO COMPLETO</span>
     <h2>Cosa c'è dentro</h2>
     <p class="section-lead">9 moduli, 2 glossari (130+ termini), 16 infografiche, 4 appendici pratiche.</p>
 
     <div class="modules">
 
       <article class="module">
-        <span class="module-number">00</span>
-        <h3>Le parole che ti servono per partire</h3>
-        <p>Cosa significa davvero "deploy", "produzione", "ambiente". Differenza tra <strong>server, hosting, dominio, DNS</strong>. Cos'è FTP, SSH, Git. Cos'è una libreria, un framework, un pacchetto, un'API, un SDK.</p>
-        <span class="module-meta">14 pagine · 4 capitoli · 4 infografiche</span>
+        <div class="module-num">00</div>
+        <div class="module-body">
+          <h3>Le parole che ti servono per partire</h3>
+          <p>Cosa significa davvero <em>deploy</em>, <em>produzione</em>, <em>ambiente</em>. Differenza tra <strong>server, hosting, dominio, DNS</strong>. Cos'è FTP, SSH, Git. Cos'è una libreria, un framework, un pacchetto, un'API, un SDK.</p>
+          <div class="module-meta">
+            <span>14 pagine</span>
+            <span>4 capitoli</span>
+            <span>4 infografiche</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">01</span>
-        <h3>Cosa sta succedendo davvero quando premi "Deploy"</h3>
-        <p>La mappa del territorio: browser, DNS, CDN, server, database. Cosa fa Claude quando scrivi un prompt. Il viaggio del click in 8 passi.</p>
-        <span class="module-meta">14 pagine · 4 capitoli · 2 infografiche</span>
+        <div class="module-num">01</div>
+        <div class="module-body">
+          <h3>Cosa sta succedendo davvero quando premi "Deploy"</h3>
+          <p>La mappa del territorio: browser, DNS, CDN, server, database. Cosa fa Claude quando scrivi un prompt. Il viaggio del click in 8 passi.</p>
+          <div class="module-meta">
+            <span>14 pagine</span>
+            <span>4 capitoli</span>
+            <span>2 infografiche</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">02</span>
-        <h3>Client e server: chi fa cosa</h3>
-        <p>La distinzione più importante che il vibecoder non capisce. Quali linguaggi vivono lato browser (React, Vue, HTML/CSS), quali lato server (Node, PHP, Python). Perché JavaScript è speciale (gira in entrambi).</p>
-        <span class="module-meta">18 pagine · 5 capitoli · 3 infografiche</span>
+        <div class="module-num">02</div>
+        <div class="module-body">
+          <h3>Client e server: chi fa cosa</h3>
+          <p>La distinzione più importante che il vibecoder non capisce. Quali linguaggi vivono lato browser (React, Vue, HTML/CSS), quali lato server (Node, PHP, Python). Perché JavaScript è speciale (gira in entrambi).</p>
+          <div class="module-meta">
+            <span>18 pagine</span>
+            <span>5 capitoli</span>
+            <span>3 infografiche</span>
+          </div>
+        </div>
       </article>
 
       <article class="module module-highlight">
-        <span class="module-number">03</span>
-        <h3>L'anatomia di una pagina web</h3>
-        <p>Modulo super-visivo. Disegno di una pagina-tipo annotato con TUTTI i nomi corretti: <strong>header, navbar, sidebar, hero, card, modal, drawer, accordion, toast, breadcrumb, stepper, skeleton loader…</strong> Imparerai a descrivere ciò che vuoi a Claude in modo che lui capisca al primo colpo.</p>
-        <span class="module-meta">22 pagine · 5 capitoli · 5 infografiche · ⭐ Modulo bandiera</span>
+        <div class="module-num">03</div>
+        <div class="module-body">
+          <span class="module-flag">★ Modulo bandiera</span>
+          <h3>L'anatomia di una pagina web</h3>
+          <p>Modulo super-visivo. Disegno di una pagina-tipo annotato con TUTTI i nomi corretti: <strong>header, navbar, sidebar, hero, card, modal, drawer, accordion, toast, breadcrumb, stepper, skeleton loader…</strong> Imparerai a descrivere ciò che vuoi a Claude in modo che lui capisca al primo colpo.</p>
+          <div class="module-meta">
+            <span>22 pagine</span>
+            <span>5 capitoli</span>
+            <span>5 infografiche</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">04</span>
-        <h3>Il browser è stupido (ma fa tutto lui)</h3>
-        <p>HTML, CSS, JavaScript, DOM, React. Server Components vs Client Components in Next.js. Perché il tuo CSS è bello su Figma e brutto su iPhone SE.</p>
-        <span class="module-meta">18 pagine · 5 capitoli</span>
+        <div class="module-num">04</div>
+        <div class="module-body">
+          <h3>Il browser è stupido (ma fa tutto lui)</h3>
+          <p>HTML, CSS, JavaScript, DOM, React. Server Components vs Client Components in Next.js. Perché il tuo CSS è bello su Figma e brutto su iPhone SE.</p>
+          <div class="module-meta">
+            <span>18 pagine</span>
+            <span>5 capitoli</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">05</span>
-        <h3>Il server è il cameriere che nessuno vede</h3>
-        <p>Cos'è un'API REST con la metafora del menù del ristorante. I verbi HTTP (GET, POST, PUT, DELETE). I codici di stato decifrati: 200, 404, 401, 500. Headers, body, JSON.</p>
-        <span class="module-meta">20 pagine · 5 capitoli · 1 infografica</span>
+        <div class="module-num">05</div>
+        <div class="module-body">
+          <h3>Il server è il cameriere che nessuno vede</h3>
+          <p>Cos'è un'API REST con la metafora del menu del ristorante. I verbi HTTP (GET, POST, PUT, DELETE). I codici di stato decifrati: 200, 404, 401, 500. Headers, body, JSON.</p>
+          <div class="module-meta">
+            <span>20 pagine</span>
+            <span>5 capitoli</span>
+            <span>1 infografica</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">06</span>
-        <h3>Il database non è un foglio Excel (quasi)</h3>
-        <p>Tabelle, righe, chiavi primarie. SQL in 10 minuti. Differenza tra <strong>SQL e NoSQL</strong>, Supabase vs Firebase. Cosa è una migration. Backup senza piangere.</p>
-        <span class="module-meta">18 pagine · 5 capitoli</span>
+        <div class="module-num">06</div>
+        <div class="module-body">
+          <h3>Il database non è un foglio Excel (quasi)</h3>
+          <p>Tabelle, righe, chiavi primarie. SQL in 10 minuti. Differenza tra <strong>SQL e NoSQL</strong>, Supabase vs Firebase. Cosa è una migration. Backup senza piangere.</p>
+          <div class="module-meta">
+            <span>18 pagine</span>
+            <span>5 capitoli</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">07</span>
-        <h3>Il viaggio del click in produzione</h3>
-        <p>DNS spiegato bene. HTTPS e certificati SSL. Nginx come reverse proxy. Variabili d'ambiente. Cookie, sessioni, JWT. CORS in 3 paragrafi.</p>
-        <span class="module-meta">22 pagine · 6 capitoli · 1 infografica</span>
+        <div class="module-num">07</div>
+        <div class="module-body">
+          <h3>Il viaggio del click in produzione</h3>
+          <p>DNS spiegato bene. HTTPS e certificati SSL. Nginx come reverse proxy. Variabili d'ambiente. Cookie, sessioni, JWT. CORS in 3 paragrafi.</p>
+          <div class="module-meta">
+            <span>22 pagine</span>
+            <span>6 capitoli</span>
+            <span>1 infografica</span>
+          </div>
+        </div>
       </article>
 
       <article class="module">
-        <span class="module-number">08</span>
-        <h3>Parlare a Claude come uno sviluppatore</h3>
-        <p>Tutto quello che hai imparato si traduce in prompt migliori. Pattern fisso: prompt vago → prompt informato. Spiegare un bug senza sapere il bug. Il ciclo debug del vibecoder serio.</p>
-        <span class="module-meta">16 pagine · 5 capitoli</span>
+        <div class="module-num">08</div>
+        <div class="module-body">
+          <h3>Parlare a Claude come uno sviluppatore</h3>
+          <p>Tutto quello che hai imparato si traduce in prompt migliori. Pattern fisso: prompt vago → prompt informato. Spiegare un bug senza sapere il bug. Il ciclo debug del vibecoder serio.</p>
+          <div class="module-meta">
+            <span>16 pagine</span>
+            <span>5 capitoli</span>
+          </div>
+        </div>
       </article>
 
     </div>
@@ -189,8 +393,9 @@
 </section>
 
 <!-- 5 QUICK WINS -->
-<section class="quickwins">
+<section class="quickwins fade-in">
   <div class="container">
+    <span class="section-tag">PARTE II</span>
     <h2>I 5 capitoli che da soli valgono il libro</h2>
     <p class="section-lead">Risolvono problemi che hai avuto la settimana scorsa.</p>
     <ol class="quickwins-list">
@@ -219,24 +424,28 @@
 </section>
 
 <!-- BONUS -->
-<section class="bonus">
+<section class="bonus fade-in">
   <div class="container">
     <h2>Più 4 appendici pratiche</h2>
     <div class="bonus-grid">
       <div class="bonus-card">
-        <h4>📋 Cheat Sheet del Debug</h4>
+        <div class="bonus-icon">📋</div>
+        <h4>Cheat Sheet del Debug</h4>
         <p>Tabella stampabile: per ogni errore frequente, dove guardare e cosa dire a Claude.</p>
       </div>
       <div class="bonus-card">
-        <h4>✅ Checklist Pre-Deploy in 15 punti</h4>
-        <p>Variabili .env, HTTPS, CORS, backup, errori console, robots.txt, sitemap…</p>
+        <div class="bonus-icon">✅</div>
+        <h4>Checklist Pre-Deploy</h4>
+        <p>15 punti: variabili .env, HTTPS, CORS, backup, errori console, robots.txt, sitemap…</p>
       </div>
       <div class="bonus-card">
-        <h4>💬 I 10 Prompt da Salvare</h4>
+        <div class="bonus-icon">💬</div>
+        <h4>10 Prompt da Salvare</h4>
         <p>Prompt copiabili Claude-ready per debug API, fix CORS, autenticazione, upload file.</p>
       </div>
       <div class="bonus-card">
-        <h4>🇮🇹 GDPR per Vibecoder Italiani</h4>
+        <div class="bonus-icon">🇮🇹</div>
+        <h4>GDPR per Vibecoder Italiani</h4>
         <p>Cookie banner, privacy policy, dove vivono i dati. Tutto in 2 pagine pratiche.</p>
       </div>
     </div>
@@ -244,12 +453,13 @@
 </section>
 
 <!-- 2 GLOSSARI -->
-<section class="glossari">
+<section class="glossari fade-in">
   <div class="container">
     <h2>2 glossari ricchi che diventano il tuo riferimento</h2>
     <div class="glossari-grid">
       <div class="glossario-card">
-        <h3>📚 Glossario 1 — Programmazione &amp; architettura</h3>
+        <div class="glossario-icon">📚</div>
+        <h3>Glossario 1<br>Programmazione &amp; architettura</h3>
         <p>~80 termini organizzati in 7 categorie:</p>
         <ul>
           <li>Ambienti e deploy (localhost, staging, prod, build, CI/CD)</li>
@@ -262,7 +472,8 @@
         </ul>
       </div>
       <div class="glossario-card">
-        <h3>🎨 Glossario 2 — Anatomia di una pagina web</h3>
+        <div class="glossario-icon">🎨</div>
+        <h3>Glossario 2<br>Anatomia di una pagina web</h3>
         <p>~50 termini di UI organizzati per zona:</p>
         <ul>
           <li>Layout (header, footer, main, sidebar, navigation)</li>
@@ -279,36 +490,40 @@
 </section>
 
 <!-- INFOGRAFICHE -->
-<section class="infografiche">
+<section class="infografiche fade-in">
   <div class="container">
     <h2>16 infografiche che ti restano in testa</h2>
     <p class="section-lead">Non un libro denso di paragrafi. Un manuale visivo, fatto per essere consultato quando ti serve.</p>
     <div class="info-list">
-      <div>1. I 3 ambienti (localhost / staging / prod)</div>
-      <div>2. Anatomia di un sito online</div>
-      <div>3. Le scatole di Lego del codice</div>
-      <div>4. Da localhost al server in 3 modi</div>
-      <div>5. Dove vive un sito</div>
-      <div>6. Il viaggio del click</div>
-      <div>7. La danza client-server</div>
-      <div>8. Quali linguaggi vivono dove</div>
-      <div>9. Triangolo client-server-database</div>
-      <div class="info-highlight">10. ⭐ Anatomia di una pagina (poster A2 nel Bundle Pro)</div>
-      <div>11. Componenti di navigazione</div>
-      <div>12. Componenti di contenuto</div>
-      <div>13. Componenti di interazione</div>
-      <div>14. Stati di un componente</div>
-      <div>15. Decoder degli status code HTTP</div>
-      <div>16. DNS resolution flow</div>
+      <div>I 3 ambienti</div>
+      <div>Anatomia di un sito online</div>
+      <div>Le scatole di Lego del codice</div>
+      <div>Da localhost al server in 3 modi</div>
+      <div>Dove vive un sito</div>
+      <div>Il viaggio del click</div>
+      <div>La danza client-server</div>
+      <div>Quali linguaggi vivono dove</div>
+      <div>Triangolo client-server-database</div>
+      <div class="info-highlight">★ Anatomia di una pagina (poster A2)</div>
+      <div>Componenti di navigazione</div>
+      <div>Componenti di contenuto</div>
+      <div>Componenti di interazione</div>
+      <div>Stati di un componente</div>
+      <div>Decoder degli status code HTTP</div>
+      <div>DNS resolution flow</div>
     </div>
+    <p class="info-cta">
+      <a href="/infografiche/" class="link-arrow">Sfoglia tutte e 16 le infografiche →</a>
+    </p>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="prezzo" class="pricing">
+<section id="prezzo" class="pricing fade-in">
   <div class="container">
-    <h2>Prezzo</h2>
-    <p class="section-lead">Tre opzioni — la prima è il tuo bonus per esserci sin dall'inizio.</p>
+    <span class="section-tag">PREZZO</span>
+    <h2>Tre opzioni — la prima è il tuo bonus</h2>
+    <p class="section-lead">Per esserci sin dall'inizio.</p>
     <div class="pricing-grid">
 
       <div class="pricing-card pricing-early">
@@ -343,9 +558,9 @@
         <ul>
           <li>Tutto incluso nello Standard</li>
           <li><strong>Poster A2 stampabile</strong> "Anatomia di una pagina"</li>
-          <li>30 prompt template Claude-ready (Notion DB)</li>
+          <li>30 prompt template Claude-ready</li>
           <li>Accesso al canale Telegram riservato</li>
-          <li>Sessioni Q&A mensili in diretta</li>
+          <li>Sessioni Q&amp;A mensili in diretta</li>
         </ul>
         <a href="#preorder" class="btn btn-ghost">Disponibile al lancio</a>
       </div>
@@ -355,24 +570,27 @@
 </section>
 
 <!-- SAMPLE DOWNLOAD -->
-<section id="preorder" class="preorder">
+<section id="preorder" class="preorder fade-in">
   <div class="container">
     <div class="preorder-card">
       <h2>Leggi le prime 60 pagine. Gratis.</h2>
       <p>
-        Sample PDF impaginato come l'edizione finale: cover, prefazione, indice completo, Modulo 0 e Modulo 1 integrali. Tipografia <strong>Source Serif 4 + Inter Tight</strong>, 6×9 pollici, palette identica al libro definitivo.
+        Sample PDF impaginato come l'edizione finale: cover, prefazione, indice completo, Modulo 0 e Modulo 1 integrali con <strong>6 infografiche full-page</strong>. Tipografia <strong>Source Serif 4 + Inter Tight</strong>, 6×9 pollici, palette identica al libro definitivo.
       </p>
       <div class="cta-group" style="justify-content: center; margin-top: 12px;">
-        <a href="/vibecoding-serio-sample.pdf" class="btn btn-primary" download>📕 Scarica il sample PDF</a>
+        <a href="/vibecoding-serio-sample.pdf" class="btn btn-primary" download>
+          <span>Scarica il sample PDF</span>
+          <span class="btn-arrow">↓</span>
+        </a>
         <a href="/infografiche/" class="btn btn-ghost">Sfoglia le 16 infografiche →</a>
       </div>
-      <p class="preorder-note">Sample PDF · ~530 KB · 60 pagine. Niente form, niente spam.</p>
+      <p class="preorder-note">Sample PDF · ~948 KB · 60 pagine. Niente form, niente spam.</p>
     </div>
   </div>
 </section>
 
-<!-- ABOUT LUCA -->
-<section class="about">
+<!-- ABOUT LUPO -->
+<section class="about fade-in">
   <div class="container">
     <h2>Chi sono</h2>
     <div class="about-grid">
@@ -391,7 +609,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq">
+<section class="faq fade-in">
   <div class="container">
     <h2>Domande frequenti</h2>
     <details>
@@ -404,7 +622,7 @@
     </details>
     <details>
       <summary>Quante pagine?</summary>
-      <p>Circa 213 pagine, 8-9 ore di lettura. Pensato per essere letto a pezzi (lineare, Quick Wins, riferimento). I glossari da soli sono ~32 pagine, consultabili come dizionario.</p>
+      <p>251 pagine, 8-9 ore di lettura. Pensato per essere letto a pezzi (lineare, Quick Wins, riferimento). I glossari da soli sono ~32 pagine, consultabili come dizionario.</p>
     </details>
     <details>
       <summary>Aggiornamenti?</summary>
@@ -430,6 +648,8 @@
     </p>
   </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
