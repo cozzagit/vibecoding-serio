@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAF7"/>
+      <stop offset="100%" stop-color="#F4F1EA"/>
+    </linearGradient>
+    <filter id="soft-shadow-12" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg12)"/>
+
+  <!-- HEADER -->
+  <text x="80" y="80" font-size="13" font-weight="600" fill="#9CA3AF" letter-spacing="2">MODULO 3  ·  INFOGRAFICA 12</text>
+  <text x="80" y="125" font-size="38" font-weight="700" fill="#0F1419" letter-spacing="-1.2">Componenti di contenuto</text>
+  <text x="80" y="160" font-size="17" fill="#6B7280" letter-spacing="-0.2">Otto blocchi-tipo che riempiono il main content di qualsiasi sito.</text>
+
+  <!-- CONTENUTO y>=200 -->
+
+  <g transform="translate(80, 215)">
+
+    <!-- 1. HERO -->
+    <g filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">01  ·  HERO</text>
+      <!-- Sample: big text + CTA + image -->
+      <rect x="20" y="50" width="130" height="14" rx="2" fill="#0F1419"/>
+      <rect x="20" y="70" width="100" height="14" rx="2" fill="#0F1419"/>
+      <rect x="20" y="92" width="160" height="6" rx="1" fill="#9CA3AF"/>
+      <rect x="20" y="104" width="140" height="6" rx="1" fill="#9CA3AF"/>
+      <rect x="20" y="124" width="60" height="20" rx="4" fill="#0D9488"/>
+      <rect x="190" y="50" width="40" height="100" rx="6" fill="#D1FAE5"/>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Banda alta</tspan> sopra la fold.</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">Titolo + CTA + immagine.</text>
+    </g>
+
+    <!-- 2. CARD -->
+    <g transform="translate(270, 0)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">02  ·  CARD</text>
+      <!-- Sample card -->
+      <rect x="80" y="48" width="100" height="120" rx="6" fill="#F9FAFB" stroke="#E5E7EB"/>
+      <rect x="86" y="54" width="88" height="52" rx="3" fill="#D1D5DB"/>
+      <rect x="86" y="113" width="60" height="6" rx="1" fill="#0F1419"/>
+      <rect x="86" y="123" width="80" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="86" y="146" width="40" height="14" rx="3" fill="#0D9488"/>
+
+      <text x="20" y="190" font-size="13" fill="#0F1419"><tspan font-weight="700">Riquadro</tspan> autocontenuto:</text>
+      <text x="20" y="206" font-size="13" fill="#0F1419">img + titolo + CTA.</text>
+    </g>
+
+    <!-- 3. BANNER -->
+    <g transform="translate(540, 0)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">03  ·  BANNER</text>
+      <!-- Sample banner -->
+      <rect x="20" y="60" width="210" height="36" rx="6" fill="#FEF3C7"/>
+      <rect x="32" y="74" width="120" height="8" rx="1" fill="#92400E"/>
+      <text x="218" y="83" font-size="11" fill="#92400E" font-weight="700">×</text>
+
+      <text x="20" y="135" font-size="13" fill="#0F1419"><tspan font-weight="700">Barra stretta</tspan> in cima:</text>
+      <text x="20" y="153" font-size="13" fill="#0F1419">avviso o promozione.</text>
+
+      <text x="20" y="186" font-size="11" font-weight="600" fill="#9CA3AF" letter-spacing="1">SPESSO</text>
+      <text x="20" y="206" font-size="12" fill="#6B7280">Dismissibile con X</text>
+    </g>
+
+    <!-- 4. LIST -->
+    <g transform="translate(810, 0)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">04  ·  LIST</text>
+      <!-- Sample list -->
+      <rect x="20" y="50" width="210" height="28" rx="3" fill="#EFF6FF"/>
+      <circle cx="36" cy="64" r="9" fill="#2563EB"/>
+      <rect x="55" y="58" width="80" height="6" rx="1" fill="#0F1419"/>
+      <rect x="55" y="68" width="120" height="4" rx="1" fill="#9CA3AF"/>
+
+      <rect x="20" y="84" width="210" height="28" rx="3" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <circle cx="36" cy="98" r="9" fill="#9CA3AF"/>
+      <rect x="55" y="92" width="60" height="6" rx="1" fill="#0F1419"/>
+      <rect x="55" y="102" width="100" height="4" rx="1" fill="#9CA3AF"/>
+
+      <rect x="20" y="118" width="210" height="28" rx="3" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <circle cx="36" cy="132" r="9" fill="#9CA3AF"/>
+      <rect x="55" y="126" width="70" height="6" rx="1" fill="#0F1419"/>
+      <rect x="55" y="136" width="80" height="4" rx="1" fill="#9CA3AF"/>
+
+      <text x="20" y="180" font-size="13" fill="#0F1419"><tspan font-weight="700">Lista verticale</tspan></text>
+      <text x="20" y="198" font-size="13" fill="#0F1419">di elementi simili.</text>
+    </g>
+
+    <!-- 5. GRID -->
+    <g transform="translate(0, 245)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">05  ·  GRID</text>
+      <!-- Sample 3x2 grid -->
+      <g fill="#F3F4F6" stroke="#E5E7EB">
+        <rect x="20" y="50" width="62" height="40" rx="3"/>
+        <rect x="94" y="50" width="62" height="40" rx="3"/>
+        <rect x="168" y="50" width="62" height="40" rx="3"/>
+        <rect x="20" y="100" width="62" height="40" rx="3"/>
+        <rect x="94" y="100" width="62" height="40" rx="3"/>
+        <rect x="168" y="100" width="62" height="40" rx="3"/>
+      </g>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Griglia</tspan> di elementi.</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">Tipico per card prodotto.</text>
+    </g>
+
+    <!-- 6. CAROUSEL -->
+    <g transform="translate(270, 245)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">06  ·  CAROUSEL</text>
+      <!-- Sample carousel -->
+      <rect x="40" y="50" width="170" height="80" rx="6" fill="#F3F4F6" stroke="#E5E7EB"/>
+      <text x="20" y="95" font-size="20" fill="#9CA3AF">‹</text>
+      <text x="223" y="95" font-size="20" fill="#9CA3AF">›</text>
+      <!-- dots -->
+      <circle cx="115" cy="148" r="3" fill="#0D9488"/>
+      <circle cx="125" cy="148" r="3" fill="#D1D5DB"/>
+      <circle cx="135" cy="148" r="3" fill="#D1D5DB"/>
+
+      <text x="20" y="180" font-size="13" fill="#0F1419"><tspan font-weight="700">Slider</tspan> di immagini</text>
+      <text x="20" y="198" font-size="13" fill="#0F1419">scorrevoli.</text>
+    </g>
+
+    <!-- 7. ACCORDION -->
+    <g transform="translate(540, 245)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">07  ·  ACCORDION</text>
+      <!-- Sample accordion -->
+      <rect x="20" y="50" width="210" height="28" rx="3" fill="#F9FAFB" stroke="#E5E7EB"/>
+      <rect x="32" y="62" width="100" height="6" rx="1" fill="#0F1419"/>
+      <text x="218" y="68" font-size="13" fill="#9CA3AF" font-weight="700">×</text>
+
+      <rect x="20" y="80" width="210" height="42" rx="3" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <rect x="32" y="92" width="180" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="32" y="102" width="160" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="32" y="112" width="140" height="4" rx="1" fill="#9CA3AF"/>
+
+      <rect x="20" y="124" width="210" height="28" rx="3" fill="#F9FAFB" stroke="#E5E7EB"/>
+      <rect x="32" y="136" width="80" height="6" rx="1" fill="#0F1419"/>
+      <text x="218" y="142" font-size="13" fill="#9CA3AF" font-weight="700">+</text>
+
+      <text x="20" y="186" font-size="13" fill="#0F1419"><tspan font-weight="700">Sezioni espandibili</tspan></text>
+      <text x="20" y="204" font-size="13" fill="#0F1419">al click. Tipico FAQ.</text>
+    </g>
+
+    <!-- 8. TABLE -->
+    <g transform="translate(810, 245)" filter="url(#soft-shadow-12)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">08  ·  TABLE</text>
+      <!-- Sample table -->
+      <rect x="20" y="50" width="210" height="22" rx="3" fill="#F3F4F6"/>
+      <line x1="20" y1="72" x2="230" y2="72" stroke="#E5E7EB"/>
+      <rect x="30" y="58" width="40" height="6" rx="1" fill="#9CA3AF"/>
+      <rect x="90" y="58" width="40" height="6" rx="1" fill="#9CA3AF"/>
+      <rect x="160" y="58" width="40" height="6" rx="1" fill="#9CA3AF"/>
+
+      <rect x="30" y="82" width="60" height="5" rx="1" fill="#0F1419"/>
+      <rect x="100" y="82" width="40" height="5" rx="1" fill="#0F1419"/>
+      <rect x="170" y="82" width="50" height="5" rx="1" fill="#0F1419"/>
+
+      <rect x="20" y="98" width="210" height="20" fill="#F9FAFB"/>
+      <rect x="30" y="106" width="60" height="5" rx="1" fill="#0F1419"/>
+      <rect x="100" y="106" width="40" height="5" rx="1" fill="#0F1419"/>
+      <rect x="170" y="106" width="50" height="5" rx="1" fill="#0F1419"/>
+
+      <rect x="30" y="130" width="60" height="5" rx="1" fill="#0F1419"/>
+      <rect x="100" y="130" width="40" height="5" rx="1" fill="#0F1419"/>
+      <rect x="170" y="130" width="50" height="5" rx="1" fill="#0F1419"/>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Tabella</tspan> con righe e</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">colonne. Header sticky.</text>
+    </g>
+
+  </g>
+
+  <!-- FOOTER -->
+  <text x="1120" y="788" font-size="11" fill="#D1D5DB" text-anchor="end" letter-spacing="1">VIBECODING SERIO  ·  12/16</text>
+</svg>

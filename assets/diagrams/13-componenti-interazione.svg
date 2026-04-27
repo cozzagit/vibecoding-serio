@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg13" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAF7"/>
+      <stop offset="100%" stop-color="#F4F1EA"/>
+    </linearGradient>
+    <filter id="soft-shadow-13" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg13)"/>
+
+  <!-- HEADER -->
+  <text x="80" y="80" font-size="13" font-weight="600" fill="#9CA3AF" letter-spacing="2">MODULO 3  ·  INFOGRAFICA 13</text>
+  <text x="80" y="125" font-size="38" font-weight="700" fill="#0F1419" letter-spacing="-1.2">Componenti di interazione</text>
+  <text x="80" y="160" font-size="17" fill="#6B7280" letter-spacing="-0.2">Tutto ciò con cui l'utente "fa qualcosa": cliccare, digitare, confermare.</text>
+
+  <!-- CONTENUTO y>=200 -->
+
+  <g transform="translate(80, 215)">
+
+    <!-- 1. MODAL -->
+    <g filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">01  ·  MODAL</text>
+      <!-- Sample: page with modal overlay -->
+      <rect x="20" y="50" width="210" height="100" rx="6" fill="#0F1419" opacity="0.4"/>
+      <rect x="55" y="78" width="140" height="50" rx="4" fill="#FFFFFF"/>
+      <rect x="65" y="86" width="80" height="6" rx="1" fill="#0F1419"/>
+      <rect x="65" y="98" width="100" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="65" y="115" width="32" height="10" rx="2" fill="#F3F4F6"/>
+      <rect x="105" y="115" width="32" height="10" rx="2" fill="#BE123C"/>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Finestra centrale</tspan> con</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">overlay scuro. Bloccante.</text>
+    </g>
+
+    <!-- 2. DRAWER -->
+    <g transform="translate(270, 0)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">02  ·  DRAWER</text>
+      <!-- Sample: drawer from left -->
+      <rect x="20" y="50" width="210" height="100" rx="6" fill="#F3F4F6"/>
+      <rect x="20" y="50" width="80" height="100" rx="6" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <rect x="32" y="62" width="56" height="6" rx="1" fill="#7C3AED"/>
+      <rect x="32" y="76" width="50" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="32" y="86" width="56" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="32" y="96" width="44" height="4" rx="1" fill="#9CA3AF"/>
+      <rect x="32" y="106" width="50" height="4" rx="1" fill="#9CA3AF"/>
+      <!-- arrow -->
+      <line x1="100" y1="100" x2="115" y2="100" stroke="#7C3AED" stroke-width="2" marker-end="url(#arr-13)"/>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Pannello</tspan> dal bordo</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">(lato/alto/basso).</text>
+    </g>
+
+    <!-- 3. TOAST -->
+    <g transform="translate(540, 0)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">03  ·  TOAST</text>
+      <!-- Sample: page with toast bottom-right -->
+      <rect x="20" y="50" width="210" height="100" rx="6" fill="#F3F4F6"/>
+      <rect x="135" y="125" width="90" height="22" rx="4" fill="#0D9488"/>
+      <circle cx="148" cy="136" r="4" fill="#FFFFFF"/>
+      <rect x="160" y="132" width="50" height="6" rx="1" fill="#FFFFFF"/>
+
+      <text x="20" y="178" font-size="13" fill="#0F1419"><tspan font-weight="700">Notifica piccola</tspan>,</text>
+      <text x="20" y="196" font-size="13" fill="#0F1419">temporanea. Auto-dismiss.</text>
+    </g>
+
+    <!-- 4. TOOLTIP -->
+    <g transform="translate(810, 0)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">04  ·  TOOLTIP</text>
+      <!-- Sample: icon with tooltip above -->
+      <circle cx="125" cy="120" r="14" fill="#F3F4F6" stroke="#9CA3AF"/>
+      <text x="125" y="125" font-size="13" font-weight="700" fill="#9CA3AF" text-anchor="middle">i</text>
+
+      <rect x="50" y="68" width="150" height="34" rx="6" fill="#0F1419"/>
+      <rect x="60" y="76" width="130" height="5" rx="1" fill="#FFFFFF"/>
+      <rect x="60" y="85" width="100" height="5" rx="1" fill="#FFFFFF"/>
+      <polygon points="120,102 130,108 120,108" fill="#0F1419"/>
+
+      <text x="20" y="160" font-size="13" fill="#0F1419"><tspan font-weight="700">Bubble di testo</tspan> al hover.</text>
+      <text x="20" y="178" font-size="13" fill="#0F1419">Solo lettura.</text>
+    </g>
+
+    <!-- 5. DROPDOWN -->
+    <g transform="translate(0, 245)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">05  ·  DROPDOWN</text>
+      <!-- Sample: button with dropdown open -->
+      <rect x="65" y="55" width="120" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <rect x="75" y="65" width="60" height="8" rx="1" fill="#0F1419"/>
+      <text x="170" y="73" font-size="13" fill="#9CA3AF">▾</text>
+
+      <rect x="65" y="89" width="120" height="78" rx="4" fill="#FFFFFF" stroke="#E5E7EB" filter="url(#soft-shadow-13)"/>
+      <rect x="73" y="98" width="80" height="6" rx="1" fill="#0F1419"/>
+      <rect x="73" y="113" width="70" height="6" rx="1" fill="#0F1419"/>
+      <line x1="65" y1="128" x2="185" y2="128" stroke="#E5E7EB"/>
+      <rect x="73" y="135" width="60" height="6" rx="1" fill="#BE123C"/>
+      <rect x="73" y="150" width="70" height="6" rx="1" fill="#0F1419"/>
+
+      <text x="20" y="190" font-size="13" fill="#0F1419"><tspan font-weight="700">Menu a tendina</tspan> al click,</text>
+      <text x="20" y="206" font-size="13" fill="#0F1419">con opzioni cliccabili.</text>
+    </g>
+
+    <!-- 6. FORM / INPUT -->
+    <g transform="translate(270, 245)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">06  ·  FORM</text>
+      <!-- input -->
+      <rect x="20" y="50" width="210" height="26" rx="4" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+      <rect x="30" y="60" width="80" height="6" rx="1" fill="#0F1419"/>
+      <!-- checkbox -->
+      <rect x="20" y="85" width="14" height="14" rx="3" fill="#7C3AED"/>
+      <text x="27" y="96" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+      <rect x="42" y="91" width="120" height="4" rx="1" fill="#9CA3AF"/>
+      <!-- toggle -->
+      <rect x="20" y="110" width="32" height="16" rx="8" fill="#0D9488"/>
+      <circle cx="44" cy="118" r="6" fill="#FFFFFF"/>
+      <rect x="62" y="116" width="80" height="4" rx="1" fill="#9CA3AF"/>
+      <!-- button -->
+      <rect x="20" y="138" width="80" height="22" rx="4" fill="#7C3AED"/>
+      <rect x="35" y="146" width="50" height="6" rx="1" fill="#FFFFFF"/>
+
+      <text x="20" y="190" font-size="13" fill="#0F1419"><tspan font-weight="700">Input testo</tspan>, checkbox,</text>
+      <text x="20" y="206" font-size="13" fill="#0F1419">radio, select, slider, toggle.</text>
+    </g>
+
+    <!-- 7. BUTTON VARIANTS -->
+    <g transform="translate(540, 245)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">07  ·  BUTTON</text>
+      <!-- Primary -->
+      <rect x="20" y="55" width="100" height="28" rx="4" fill="#0F1419"/>
+      <rect x="40" y="66" width="60" height="6" rx="1" fill="#FFFFFF"/>
+      <text x="135" y="74" font-size="11" fill="#9CA3AF">primary</text>
+      <!-- Secondary -->
+      <rect x="20" y="92" width="100" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <rect x="40" y="103" width="60" height="6" rx="1" fill="#0F1419"/>
+      <text x="135" y="111" font-size="11" fill="#9CA3AF">secondary</text>
+      <!-- Ghost -->
+      <rect x="20" y="129" width="100" height="28" rx="4" fill="transparent"/>
+      <rect x="40" y="140" width="60" height="6" rx="1" fill="#0F1419"/>
+      <text x="135" y="148" font-size="11" fill="#9CA3AF">ghost</text>
+      <!-- Destructive -->
+      <rect x="20" y="166" width="100" height="28" rx="4" fill="#BE123C"/>
+      <rect x="40" y="177" width="60" height="6" rx="1" fill="#FFFFFF"/>
+      <text x="135" y="185" font-size="11" fill="#9CA3AF">destructive</text>
+    </g>
+
+    <!-- 8. BADGE / CHIP / TAG -->
+    <g transform="translate(810, 245)" filter="url(#soft-shadow-13)">
+      <rect x="0" y="0" width="250" height="220" rx="14" fill="#FFFFFF" stroke="#E5E7EB"/>
+      <text x="20" y="32" font-size="11" font-weight="700" fill="#7C3AED" letter-spacing="2">08  ·  BADGE · CHIP · TAG</text>
+      <!-- Badge: cart with number -->
+      <rect x="40" y="55" width="32" height="32" rx="4" fill="#F3F4F6"/>
+      <rect x="50" y="63" width="12" height="14" rx="1" fill="#0F1419"/>
+      <circle cx="76" cy="55" r="9" fill="#BE123C"/>
+      <text x="76" y="59" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="100" y="76" font-size="11" fill="#9CA3AF">badge</text>
+
+      <!-- Chip with X -->
+      <rect x="20" y="105" width="90" height="22" rx="11" fill="#EFF6FF"/>
+      <rect x="32" y="114" width="50" height="6" rx="1" fill="#2563EB"/>
+      <text x="98" y="120" font-size="11" fill="#2563EB" font-weight="700">×</text>
+      <text x="120" y="120" font-size="11" fill="#9CA3AF">chip</text>
+
+      <!-- Tags -->
+      <rect x="20" y="148" width="50" height="20" rx="4" fill="#FEF3C7"/>
+      <rect x="28" y="156" width="34" height="4" rx="1" fill="#92400E"/>
+      <rect x="78" y="148" width="60" height="20" rx="4" fill="#D1FAE5"/>
+      <rect x="86" y="156" width="44" height="4" rx="1" fill="#065F46"/>
+      <text x="148" y="162" font-size="11" fill="#9CA3AF">tag</text>
+
+      <text x="20" y="200" font-size="11" fill="#6B7280">Etichette piccole colorate.</text>
+    </g>
+
+  </g>
+
+  <!-- FOOTER -->
+  <text x="1120" y="788" font-size="11" fill="#D1D5DB" text-anchor="end" letter-spacing="1">VIBECODING SERIO  ·  13/16</text>
+</svg>
