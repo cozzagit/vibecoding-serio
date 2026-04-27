@@ -3,6 +3,8 @@ build/
 dist/
 *.pdf
 !assets/cover/*.pdf
+!pdf/output/vibecoding-serio.pdf
+!pdf/output/vibecoding-serio-sample.pdf
 
 # Editor / OS
 .vscode/
