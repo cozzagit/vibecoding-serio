@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="32" font-weight="700" fill="#1A1A1A">Le scatole di Lego del codice</text>
+  <text x="60" y="100" font-size="16" fill="#666">Pacchetto · Libreria · Framework · API · SDK — i 5 termini che Claude usa cento volte al giorno</text>
+
+  <!-- 5 cards layout -->
+
+  <!-- PACCHETTO -->
+  <g>
+    <rect x="80" y="170" width="200" height="280" rx="12" fill="#FFFFFF" stroke="#999" stroke-width="2"/>
+    <rect x="80" y="170" width="200" height="50" rx="12" fill="#999"/>
+    <rect x="80" y="200" width="200" height="20" fill="#999"/>
+    <text x="180" y="202" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">PACCHETTO</text>
+    <text x="180" y="265" font-size="42" text-anchor="middle">📦</text>
+    <text x="180" y="305" font-size="13" fill="#666" text-anchor="middle" font-style="italic">"la bottiglia chiusa"</text>
+    <line x1="100" y1="325" x2="260" y2="325" stroke="#E5E5E0"/>
+    <text x="180" y="350" font-size="12" fill="#1A1A1A" text-anchor="middle">Il file zippato</text>
+    <text x="180" y="368" font-size="12" fill="#1A1A1A" text-anchor="middle">distribuito da npm/pip</text>
+    <line x1="100" y1="395" x2="260" y2="395" stroke="#E5E5E0"/>
+    <text x="180" y="418" font-size="11" font-weight="600" fill="#999" text-anchor="middle">ESEMPIO</text>
+    <text x="180" y="438" font-size="12" font-family="JetBrains Mono, monospace" fill="#FF7A3D" text-anchor="middle">npm install axios</text>
+  </g>
+
+  <!-- LIBRERIA -->
+  <g>
+    <rect x="300" y="170" width="200" height="280" rx="12" fill="#FFFFFF" stroke="#5B8AFF" stroke-width="2"/>
+    <rect x="300" y="170" width="200" height="50" rx="12" fill="#5B8AFF"/>
+    <rect x="300" y="200" width="200" height="20" fill="#5B8AFF"/>
+    <text x="400" y="202" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">LIBRERIA</text>
+    <text x="400" y="265" font-size="42" text-anchor="middle">🧩</text>
+    <text x="400" y="305" font-size="13" fill="#666" text-anchor="middle" font-style="italic">"la ricetta"</text>
+    <line x1="320" y1="325" x2="480" y2="325" stroke="#E5E5E0"/>
+    <text x="400" y="350" font-size="12" fill="#1A1A1A" text-anchor="middle">Codice riusabile</text>
+    <text x="400" y="368" font-size="12" fill="#1A1A1A" text-anchor="middle">per UNA cosa specifica</text>
+    <line x1="320" y1="395" x2="480" y2="395" stroke="#E5E5E0"/>
+    <text x="400" y="418" font-size="11" font-weight="600" fill="#999" text-anchor="middle">ESEMPI</text>
+    <text x="400" y="438" font-size="12" font-family="JetBrains Mono, monospace" fill="#5B8AFF" text-anchor="middle">axios · dayjs · lodash</text>
+  </g>
+
+  <!-- FRAMEWORK -->
+  <g>
+    <rect x="520" y="170" width="200" height="280" rx="12" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <rect x="520" y="170" width="200" height="50" rx="12" fill="#FF7A3D"/>
+    <rect x="520" y="200" width="200" height="20" fill="#FF7A3D"/>
+    <text x="620" y="202" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">FRAMEWORK</text>
+    <text x="620" y="265" font-size="42" text-anchor="middle">🍳</text>
+    <text x="620" y="305" font-size="13" fill="#666" text-anchor="middle" font-style="italic">"la cucina attrezzata"</text>
+    <line x1="540" y1="325" x2="700" y2="325" stroke="#E5E5E0"/>
+    <text x="620" y="350" font-size="12" fill="#1A1A1A" text-anchor="middle">Codice + struttura</text>
+    <text x="620" y="368" font-size="12" fill="#1A1A1A" text-anchor="middle">imposta a tutto il progetto</text>
+    <line x1="540" y1="395" x2="700" y2="395" stroke="#E5E5E0"/>
+    <text x="620" y="418" font-size="11" font-weight="600" fill="#999" text-anchor="middle">ESEMPI</text>
+    <text x="620" y="438" font-size="12" font-family="JetBrains Mono, monospace" fill="#FF7A3D" text-anchor="middle">Next · Laravel · Django</text>
+  </g>
+
+  <!-- API -->
+  <g>
+    <rect x="740" y="170" width="200" height="280" rx="12" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
+    <rect x="740" y="170" width="200" height="50" rx="12" fill="#2A9D8F"/>
+    <rect x="740" y="200" width="200" height="20" fill="#2A9D8F"/>
+    <text x="840" y="202" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">API</text>
+    <text x="840" y="265" font-size="42" text-anchor="middle">📋</text>
+    <text x="840" y="305" font-size="13" fill="#666" text-anchor="middle" font-style="italic">"il menu del ristorante"</text>
+    <line x1="760" y1="325" x2="920" y2="325" stroke="#E5E5E0"/>
+    <text x="840" y="350" font-size="12" fill="#1A1A1A" text-anchor="middle">Lista di cose</text>
+    <text x="840" y="368" font-size="12" fill="#1A1A1A" text-anchor="middle">richiedibili a un servizio</text>
+    <line x1="760" y1="395" x2="920" y2="395" stroke="#E5E5E0"/>
+    <text x="840" y="418" font-size="11" font-weight="600" fill="#999" text-anchor="middle">ESEMPI</text>
+    <text x="840" y="438" font-size="12" font-family="JetBrains Mono, monospace" fill="#2A9D8F" text-anchor="middle">OpenAI · Stripe · Maps</text>
+  </g>
+
+  <!-- SDK -->
+  <g>
+    <rect x="960" y="170" width="180" height="280" rx="12" fill="#FFFFFF" stroke="#9B59B6" stroke-width="2"/>
+    <rect x="960" y="170" width="180" height="50" rx="12" fill="#9B59B6"/>
+    <rect x="960" y="200" width="180" height="20" fill="#9B59B6"/>
+    <text x="1050" y="202" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">SDK</text>
+    <text x="1050" y="265" font-size="42" text-anchor="middle">🧰</text>
+    <text x="1050" y="305" font-size="13" fill="#666" text-anchor="middle" font-style="italic">"il kit pronto"</text>
+    <line x1="980" y1="325" x2="1120" y2="325" stroke="#E5E5E0"/>
+    <text x="1050" y="350" font-size="12" fill="#1A1A1A" text-anchor="middle">Libreria specializzata</text>
+    <text x="1050" y="368" font-size="12" fill="#1A1A1A" text-anchor="middle">per usare un'API</text>
+    <line x1="980" y1="395" x2="1120" y2="395" stroke="#E5E5E0"/>
+    <text x="1050" y="418" font-size="11" font-weight="600" fill="#999" text-anchor="middle">ESEMPI</text>
+    <text x="1050" y="438" font-size="11" font-family="JetBrains Mono, monospace" fill="#9B59B6" text-anchor="middle">Stripe · Supabase</text>
+  </g>
+
+  <!-- Code example block -->
+  <g>
+    <rect x="80" y="500" width="1060" height="220" rx="14" fill="#1A1A1A"/>
+    <text x="100" y="535" font-size="13" font-weight="700" fill="#999">// Esempio: aggiungere pagamenti Stripe al sito</text>
+
+    <text x="100" y="575" font-size="13" font-family="JetBrains Mono, monospace" fill="#FF7A3D">npm install stripe</text>
+    <text x="380" y="575" font-size="12" fill="#999" font-style="italic">← installi il PACCHETTO npm</text>
+
+    <text x="100" y="608" font-size="13" font-family="JetBrains Mono, monospace" fill="#5B8AFF">import Stripe from 'stripe'</text>
+    <text x="380" y="608" font-size="12" fill="#999" font-style="italic">← importi la LIBRERIA / SDK</text>
+
+    <text x="100" y="641" font-size="13" font-family="JetBrains Mono, monospace" fill="#9B59B6">const stripe = new Stripe(API_KEY)</text>
+    <text x="380" y="641" font-size="12" fill="#999" font-style="italic">← inizializzi l'SDK con la tua API key</text>
+
+    <text x="100" y="674" font-size="13" font-family="JetBrains Mono, monospace" fill="#2A9D8F">stripe.charges.create({ amount: 2900 })</text>
+    <text x="425" y="674" font-size="12" fill="#999" font-style="italic">← chiami l'API di Stripe via SDK</text>
+
+    <text x="100" y="707" font-size="13" font-family="JetBrains Mono, monospace" fill="#FF7A3D">// tutto questo dentro un progetto Next.js (FRAMEWORK)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="785" font-size="11" fill="#999" text-anchor="middle">Vibecoding Serio · Modulo 0 · Infografica 3</text>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="32" font-weight="700" fill="#1A1A1A">Dove vive un sito</text>
+  <text x="60" y="100" font-size="16" fill="#666">Le 5 entità connesse che compongono ogni sito web moderno</text>
+
+  <!-- USER -->
+  <g>
+    <circle cx="120" cy="400" r="60" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+    <text x="120" y="395" font-size="38" text-anchor="middle">👤</text>
+    <text x="120" y="430" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">UTENTE</text>
+    <text x="120" y="490" font-size="12" fill="#666" text-anchor="middle">apre il sito</text>
+    <text x="120" y="506" font-size="12" fill="#666" text-anchor="middle">dal proprio device</text>
+  </g>
+
+  <!-- arrow user → browser -->
+  <line x1="180" y1="400" x2="240" y2="400" stroke="#1A1A1A" stroke-width="2"/>
+  <polygon points="240,400 230,395 230,405" fill="#1A1A1A"/>
+
+  <!-- BROWSER -->
+  <g>
+    <rect x="250" y="350" width="180" height="100" rx="14" fill="#FFFFFF" stroke="#5B8AFF" stroke-width="2"/>
+    <text x="340" y="385" font-size="28" text-anchor="middle">🌐</text>
+    <text x="340" y="412" font-size="16" font-weight="700" fill="#2D5BFF" text-anchor="middle">BROWSER</text>
+    <text x="340" y="435" font-size="11" fill="#666" text-anchor="middle">Chrome · Safari · Firefox</text>
+  </g>
+
+  <!-- arrow browser → DNS -->
+  <line x1="430" y1="380" x2="500" y2="280" stroke="#666" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="500,280 489,283 494,294" fill="#666"/>
+
+  <!-- DNS -->
+  <g>
+    <rect x="480" y="220" width="180" height="80" rx="14" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="570" y="252" font-size="22" text-anchor="middle">📒</text>
+    <text x="570" y="280" font-size="16" font-weight="700" fill="#FF7A3D" text-anchor="middle">DNS</text>
+    <text x="570" y="295" font-size="10" fill="#666" text-anchor="middle">elenco telefonico mondiale</text>
+  </g>
+
+  <!-- arrow browser → CDN -->
+  <line x1="430" y1="400" x2="500" y2="400" stroke="#1A1A1A" stroke-width="2"/>
+  <polygon points="500,400 490,395 490,405" fill="#1A1A1A"/>
+
+  <!-- CDN -->
+  <g>
+    <rect x="500" y="350" width="180" height="100" rx="14" fill="#FFFFFF" stroke="#9B59B6" stroke-width="2" stroke-dasharray="6 3"/>
+    <text x="590" y="385" font-size="28" text-anchor="middle">🗺️</text>
+    <text x="590" y="412" font-size="16" font-weight="700" fill="#9B59B6" text-anchor="middle">CDN</text>
+    <text x="590" y="435" font-size="11" fill="#666" text-anchor="middle">file statici cachati</text>
+    <text x="675" y="473" font-size="10" fill="#9B59B6" font-style="italic">(opzionale)</text>
+  </g>
+
+  <!-- arrow CDN → SERVER -->
+  <line x1="680" y1="400" x2="750" y2="400" stroke="#1A1A1A" stroke-width="2"/>
+  <polygon points="750,400 740,395 740,405" fill="#1A1A1A"/>
+
+  <!-- SERVER -->
+  <g>
+    <rect x="750" y="350" width="180" height="100" rx="14" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
+    <text x="840" y="385" font-size="28" text-anchor="middle">⚙️</text>
+    <text x="840" y="412" font-size="16" font-weight="700" fill="#2A9D8F" text-anchor="middle">SERVER</text>
+    <text x="840" y="435" font-size="11" fill="#666" text-anchor="middle">esegue il tuo codice</text>
+  </g>
+
+  <!-- arrow SERVER → DATABASE -->
+  <line x1="930" y1="400" x2="1000" y2="400" stroke="#1A1A1A" stroke-width="2"/>
+  <polygon points="1000,400 990,395 990,405" fill="#1A1A1A"/>
+
+  <!-- DATABASE -->
+  <g>
+    <rect x="1000" y="350" width="160" height="100" rx="14" fill="#FFFFFF" stroke="#E63946" stroke-width="2"/>
+    <text x="1080" y="385" font-size="28" text-anchor="middle">🗄️</text>
+    <text x="1080" y="412" font-size="16" font-weight="700" fill="#E63946" text-anchor="middle">DATABASE</text>
+    <text x="1080" y="435" font-size="11" fill="#666" text-anchor="middle">dati persistenti</text>
+  </g>
+
+  <!-- Reverse arrows (response) -->
+  <g opacity="0.4">
+    <line x1="990" y1="420" x2="940" y2="420" stroke="#666" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <line x1="740" y1="420" x2="690" y2="420" stroke="#666" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <line x1="490" y1="420" x2="440" y2="420" stroke="#666" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <line x1="240" y1="420" x2="190" y2="420" stroke="#666" stroke-width="1.5" stroke-dasharray="3 2"/>
+  </g>
+  <text x="600" y="475" font-size="11" fill="#999" font-style="italic" text-anchor="middle">↑ richiesta · ↓ risposta (linea tratteggiata grigia) ↑</text>
+
+  <!-- LEGEND BOX BOTTOM -->
+  <rect x="60" y="540" width="1080" height="180" rx="14" fill="#FFFFFF" stroke="#E5E5E0"/>
+  <text x="80" y="572" font-size="14" font-weight="700" fill="#1A1A1A">QUANDO QUALCOSA SI ROMPE, GUARDA QUI:</text>
+
+  <!-- Symptom rows -->
+  <g font-size="13">
+    <text x="80" y="603" fill="#666">Sintomo:</text>
+    <text x="155" y="603" font-weight="600" fill="#1A1A1A">"Sito irraggiungibile"</text>
+    <text x="380" y="603" fill="#666">→</text>
+    <text x="400" y="603" fill="#FF7A3D" font-weight="600">DNS non configurato/propagato</text>
+
+    <text x="80" y="628" fill="#666">Sintomo:</text>
+    <text x="155" y="628" font-weight="600" fill="#1A1A1A">Sito carica ma immagini/css mancano</text>
+    <text x="450" y="628" fill="#666">→</text>
+    <text x="470" y="628" fill="#9B59B6" font-weight="600">CDN o asset non deployati</text>
+
+    <text x="80" y="653" fill="#666">Sintomo:</text>
+    <text x="155" y="653" font-weight="600" fill="#1A1A1A">Pagina ok ma login non parte</text>
+    <text x="395" y="653" fill="#666">→</text>
+    <text x="415" y="653" fill="#2A9D8F" font-weight="600">Server (codice o variabili .env)</text>
+
+    <text x="80" y="678" fill="#666">Sintomo:</text>
+    <text x="155" y="678" font-weight="600" fill="#1A1A1A">Login ok ma "il prodotto è sparito"</text>
+    <text x="430" y="678" fill="#666">→</text>
+    <text x="450" y="678" fill="#E63946" font-weight="600">Database o query sbagliata</text>
+
+    <text x="80" y="703" fill="#666">Sintomo:</text>
+    <text x="155" y="703" font-weight="600" fill="#1A1A1A">Errore CORS in console</text>
+    <text x="345" y="703" fill="#666">→</text>
+    <text x="365" y="703" fill="#2A9D8F" font-weight="600">Server (regole CORS errate)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="785" font-size="11" fill="#999" text-anchor="middle">Vibecoding Serio · Modulo 1 · Infografica 5</text>
+</svg>

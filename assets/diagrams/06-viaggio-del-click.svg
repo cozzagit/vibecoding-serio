@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="32" font-weight="700" fill="#1A1A1A">Il viaggio del click</text>
+  <text x="60" y="100" font-size="16" fill="#666">Cosa succede in 200-800 millisecondi tra il click e la pagina visualizzata</text>
+
+  <!-- Timeline horizontal axis -->
+  <line x1="80" y1="640" x2="1140" y2="640" stroke="#1A1A1A" stroke-width="2"/>
+  <text x="80" y="668" font-size="12" fill="#666">0 ms</text>
+  <text x="1100" y="668" font-size="12" fill="#666">~800 ms</text>
+
+  <!-- Each step is a vertical column -->
+
+  <!-- Step 1 - Click -->
+  <g>
+    <line x1="135" y1="170" x2="135" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="135" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="80" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="135" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">1</text>
+    <text x="135" y="248" font-size="32" text-anchor="middle">🖱️</text>
+    <text x="135" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">CLICK</text>
+    <text x="135" y="312" font-size="11" fill="#666" text-anchor="middle">utente preme</text>
+    <text x="135" y="326" font-size="11" fill="#666" text-anchor="middle">invio</text>
+    <text x="135" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">0 ms</text>
+  </g>
+
+  <!-- Step 2 - DNS -->
+  <g>
+    <line x1="265" y1="170" x2="265" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="265" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="210" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="265" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">2</text>
+    <text x="265" y="248" font-size="32" text-anchor="middle">🔍</text>
+    <text x="265" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">DNS LOOKUP</text>
+    <text x="265" y="312" font-size="11" fill="#666" text-anchor="middle">"dov'è</text>
+    <text x="265" y="326" font-size="11" fill="#666" text-anchor="middle">miosito.com?"</text>
+    <text x="265" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">20-100 ms</text>
+  </g>
+
+  <!-- Step 3 - TCP+TLS -->
+  <g>
+    <line x1="395" y1="170" x2="395" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="395" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="340" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="395" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">3</text>
+    <text x="395" y="248" font-size="32" text-anchor="middle">🤝</text>
+    <text x="395" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">TCP + TLS</text>
+    <text x="395" y="312" font-size="11" fill="#666" text-anchor="middle">connessione</text>
+    <text x="395" y="326" font-size="11" fill="#666" text-anchor="middle">cifrata aperta</text>
+    <text x="395" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">50-200 ms</text>
+  </g>
+
+  <!-- Step 4 - HTTP request -->
+  <g>
+    <line x1="525" y1="170" x2="525" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="525" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="470" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="525" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">4</text>
+    <text x="525" y="248" font-size="32" text-anchor="middle">📤</text>
+    <text x="525" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">HTTP REQUEST</text>
+    <text x="525" y="312" font-size="11" fill="#666" text-anchor="middle">"GET /pagina"</text>
+    <text x="525" y="326" font-size="11" fill="#666" text-anchor="middle">+ cookie</text>
+    <text x="525" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">10-30 ms</text>
+  </g>
+
+  <!-- Step 5 - Server processing - WIDER, RED HIGHLIGHT (collo bottiglia) -->
+  <g>
+    <line x1="685" y1="170" x2="685" y2="640" stroke="#E63946" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+    <circle cx="685" cy="640" r="10" fill="#E63946"/>
+    <rect x="600" y="170" width="170" height="170" rx="10" fill="#FFFFFF" stroke="#E63946" stroke-width="3"/>
+    <text x="685" y="200" font-size="11" font-weight="700" fill="#E63946" text-anchor="middle">5 · COLLO DI BOTTIGLIA</text>
+    <text x="685" y="240" font-size="32" text-anchor="middle">⚙️</text>
+    <text x="685" y="282" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">SERVER PROCESSA</text>
+    <text x="685" y="304" font-size="11" fill="#666" text-anchor="middle">esegue codice +</text>
+    <text x="685" y="318" font-size="11" fill="#666" text-anchor="middle">interroga DB +</text>
+    <text x="685" y="332" font-size="11" fill="#666" text-anchor="middle">renderizza HTML</text>
+    <text x="685" y="660" font-size="13" font-weight="700" fill="#E63946" text-anchor="middle">5-2000 ms</text>
+    <text x="685" y="680" font-size="10" fill="#E63946" text-anchor="middle" font-style="italic">qui si annida la lentezza</text>
+  </g>
+
+  <!-- Step 6 - HTTP response -->
+  <g>
+    <line x1="845" y1="170" x2="845" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="845" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="790" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="845" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">6</text>
+    <text x="845" y="248" font-size="32" text-anchor="middle">📥</text>
+    <text x="845" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">HTTP RESPONSE</text>
+    <text x="845" y="312" font-size="11" fill="#666" text-anchor="middle">200 OK +</text>
+    <text x="845" y="326" font-size="11" fill="#666" text-anchor="middle">HTML body</text>
+    <text x="845" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">10-50 ms</text>
+  </g>
+
+  <!-- Step 7 - Browser renders -->
+  <g>
+    <line x1="975" y1="170" x2="975" y2="640" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="3 3" opacity="0.4"/>
+    <circle cx="975" cy="640" r="8" fill="#FF7A3D"/>
+    <rect x="920" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
+    <text x="975" y="210" font-size="11" font-weight="700" fill="#FF7A3D" text-anchor="middle">7</text>
+    <text x="975" y="248" font-size="32" text-anchor="middle">🎨</text>
+    <text x="975" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">RENDER</text>
+    <text x="975" y="312" font-size="11" fill="#666" text-anchor="middle">parse HTML +</text>
+    <text x="975" y="326" font-size="11" fill="#666" text-anchor="middle">CSS + JS</text>
+    <text x="975" y="660" font-size="11" font-weight="600" fill="#FF7A3D" text-anchor="middle">100-1000 ms</text>
+  </g>
+
+  <!-- Step 8 - Sees -->
+  <g>
+    <circle cx="1100" cy="640" r="8" fill="#2A9D8F"/>
+    <rect x="1045" y="180" width="110" height="160" rx="10" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
+    <text x="1100" y="210" font-size="11" font-weight="700" fill="#2A9D8F" text-anchor="middle">8</text>
+    <text x="1100" y="248" font-size="32" text-anchor="middle">👁️</text>
+    <text x="1100" y="290" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">VEDE</text>
+    <text x="1100" y="312" font-size="11" fill="#666" text-anchor="middle">l'utente</text>
+    <text x="1100" y="326" font-size="11" fill="#666" text-anchor="middle">vede la pagina</text>
+    <text x="1100" y="660" font-size="11" font-weight="600" fill="#2A9D8F" text-anchor="middle">~800 ms</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="60" y="710" width="1080" height="50" rx="10" fill="#FFFFFF" stroke="#E5E5E0" stroke-dasharray="4 3"/>
+  <text x="600" y="730" font-size="13" fill="#1A1A1A" text-anchor="middle">"Il sito è lento" non è una diagnosi.</text>
+  <text x="600" y="748" font-size="13" fill="#1A1A1A" text-anchor="middle" font-style="italic">"Il TTFB è 1.8s, è il passo 5" — questa è una diagnosi.</text>
+
+  <text x="600" y="785" font-size="11" fill="#999" text-anchor="middle">Vibecoding Serio · Modulo 1 · Infografica 6</text>
+</svg>
