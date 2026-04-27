@@ -1,98 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Inter, system-ui, sans-serif">
-  <!-- Background -->
-  <rect width="1200" height="800" fill="#FAFAF7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAF7"/>
+      <stop offset="100%" stop-color="#F4F1EA"/>
+    </linearGradient>
+    <linearGradient id="green-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="amber-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rose-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BE123C" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#BE123C" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
 
-  <!-- Title -->
-  <text x="60" y="70" font-size="32" font-weight="700" fill="#1A1A1A">I 3 ambienti del tuo sito</text>
-  <text x="60" y="100" font-size="16" fill="#666">Dove vive il codice nelle diverse fasi della sua vita</text>
+  <rect width="1200" height="800" fill="url(#bg1)"/>
 
-  <!-- Arrow deploy across top -->
-  <text x="600" y="155" font-size="14" font-weight="600" fill="#666" text-anchor="middle">D E P L O Y</text>
-  <line x1="220" y1="170" x2="980" y2="170" stroke="#FF7A3D" stroke-width="2" stroke-dasharray="6 4"/>
-  <polygon points="980,170 970,165 970,175" fill="#FF7A3D"/>
+  <!-- Header -->
+  <text x="80" y="80" font-size="13" font-weight="600" fill="#9CA3AF" letter-spacing="2">MODULO 0  ·  INFOGRAFICA 01</text>
+  <text x="80" y="125" font-size="38" font-weight="700" fill="#0F1419" letter-spacing="-1.2">I tre ambienti</text>
+  <text x="80" y="160" font-size="17" fill="#6B7280" letter-spacing="-0.2">Dove vive il codice nelle diverse fasi della sua vita</text>
 
-  <!-- LOCALHOST -->
-  <g>
-    <rect x="60" y="200" width="340" height="500" rx="14" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
-    <rect x="60" y="200" width="340" height="60" rx="14" fill="#2A9D8F"/>
-    <rect x="60" y="240" width="340" height="20" fill="#2A9D8F"/>
-    <text x="230" y="240" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">LOCALHOST</text>
-    <text x="230" y="295" font-size="48" text-anchor="middle">💻</text>
-    <text x="230" y="335" font-size="14" font-family="JetBrains Mono, monospace" fill="#2D5BFF" text-anchor="middle">localhost:3000</text>
-
-    <line x1="90" y1="370" x2="370" y2="370" stroke="#E5E5E0" stroke-width="1"/>
-
-    <text x="90" y="400" font-size="12" font-weight="600" fill="#999">CHI VEDE</text>
-    <text x="90" y="425" font-size="15" fill="#1A1A1A">Solo tu, sul tuo PC</text>
-
-    <text x="90" y="465" font-size="12" font-weight="600" fill="#999">CONTIENE</text>
-    <text x="90" y="490" font-size="15" fill="#1A1A1A">Codice + dati di test</text>
-
-    <text x="90" y="530" font-size="12" font-weight="600" fill="#999">SE SI ROMPE</text>
-    <text x="90" y="555" font-size="15" fill="#1A1A1A">30 minuti persi</text>
-
-    <text x="90" y="595" font-size="12" font-weight="600" fill="#999">SPERIMENTA</text>
-    <text x="90" y="620" font-size="15" fill="#2A9D8F" font-weight="600">Tutto liberamente</text>
-
-    <rect x="90" y="650" width="280" height="36" rx="8" fill="#2A9D8F" opacity="0.12"/>
-    <text x="230" y="673" font-size="13" fill="#1A6B5F" text-anchor="middle">Il tuo laboratorio sicuro</text>
+  <!-- Deploy flow indicator -->
+  <g transform="translate(80, 195)">
+    <text x="0" y="0" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="3">DEPLOY  ·  IL CODICE SI MUOVE  →</text>
+    <line x1="280" y1="-4" x2="1040" y2="-4" stroke="#0F1419" stroke-width="1" stroke-dasharray="2 4" opacity="0.3"/>
   </g>
 
-  <!-- STAGING / DEV -->
-  <g>
-    <rect x="430" y="200" width="340" height="500" rx="14" fill="#FFFFFF" stroke="#FF7A3D" stroke-width="2"/>
-    <rect x="430" y="200" width="340" height="60" rx="14" fill="#FF7A3D"/>
-    <rect x="430" y="240" width="340" height="20" fill="#FF7A3D"/>
-    <text x="600" y="240" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">DEV / STAGING</text>
-    <text x="600" y="295" font-size="48" text-anchor="middle">🔧</text>
-    <text x="600" y="335" font-size="14" font-family="JetBrains Mono, monospace" fill="#2D5BFF" text-anchor="middle">dev.miosito.com</text>
+  <!-- ENV 1: LOCALHOST -->
+  <g transform="translate(80, 230)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="340" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="0" y="0" width="340" height="200" rx="20" fill="url(#green-fade)"/>
+    <rect x="0" y="180" width="340" height="20" fill="url(#green-fade)"/>
 
-    <line x1="460" y1="370" x2="740" y2="370" stroke="#E5E5E0" stroke-width="1"/>
+    <!-- Step badge -->
+    <text x="30" y="50" font-size="11" font-weight="700" fill="#0D9488" letter-spacing="2">01  ·  COSTRUZIONE</text>
 
-    <text x="460" y="400" font-size="12" font-weight="600" fill="#999">CHI VEDE</text>
-    <text x="460" y="425" font-size="15" fill="#1A1A1A">Tu + il tuo team</text>
+    <!-- Custom icon: laptop -->
+    <g transform="translate(170, 110)" stroke="#0F1419" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-32" y="-22" width="64" height="42" rx="3"/>
+      <line x1="-44" y1="22" x2="44" y2="22"/>
+      <line x1="-10" y1="22" x2="10" y2="22" stroke-width="2.5"/>
+      <circle cx="0" cy="-2" r="6" stroke-width="1"/>
+      <line x1="-5" y1="-5" x2="5" y2="-5" stroke="#0D9488" stroke-width="2"/>
+      <line x1="-5" y1="0" x2="3" y2="0" stroke="#0D9488" stroke-width="2"/>
+      <line x1="-5" y1="5" x2="-2" y2="5" stroke="#0D9488" stroke-width="2"/>
+    </g>
 
-    <text x="460" y="465" font-size="12" font-weight="600" fill="#999">CONTIENE</text>
-    <text x="460" y="490" font-size="15" fill="#1A1A1A">Copia recente + dati finti</text>
+    <!-- Name -->
+    <text x="170" y="190" font-size="22" font-weight="700" fill="#0F1419" text-anchor="middle" letter-spacing="-0.5">Localhost</text>
 
-    <text x="460" y="530" font-size="12" font-weight="600" fill="#999">SE SI ROMPE</text>
-    <text x="460" y="555" font-size="15" fill="#1A1A1A">Imbarazzo interno</text>
+    <!-- URL -->
+    <rect x="60" y="210" width="220" height="32" rx="6" fill="#F3F4F6"/>
+    <text x="170" y="231" font-size="13" font-family="'JetBrains Mono', monospace" fill="#0F1419" text-anchor="middle">localhost:3000</text>
 
-    <text x="460" y="595" font-size="12" font-weight="600" fill="#999">SPERIMENTA</text>
-    <text x="460" y="620" font-size="15" fill="#FF7A3D" font-weight="600">Quasi tutto, con cautela</text>
+    <!-- Divider -->
+    <line x1="30" y1="270" x2="310" y2="270" stroke="#E5E7EB"/>
 
-    <rect x="460" y="650" width="280" height="36" rx="8" fill="#FF7A3D" opacity="0.12"/>
-    <text x="600" y="673" font-size="13" fill="#A04A1F" text-anchor="middle">La prova generale</text>
+    <!-- Specs -->
+    <g font-size="11" font-weight="600" letter-spacing="1.5" fill="#9CA3AF">
+      <text x="30" y="296">CHI VEDE</text>
+      <text x="30" y="358">CONTIENE</text>
+      <text x="30" y="420">SE SI ROMPE</text>
+    </g>
+    <g font-size="14" fill="#0F1419" letter-spacing="-0.2">
+      <text x="30" y="318">Solo tu, sul tuo PC</text>
+      <text x="30" y="380">Codice + dati di test</text>
+      <text x="30" y="442">30 minuti persi</text>
+    </g>
+
+    <!-- Bottom badge -->
+    <rect x="30" y="465" width="280" height="3" rx="1.5" fill="#0D9488"/>
   </g>
 
-  <!-- PRODUCTION -->
-  <g>
-    <rect x="800" y="200" width="340" height="500" rx="14" fill="#FFFFFF" stroke="#E63946" stroke-width="2"/>
-    <rect x="800" y="200" width="340" height="60" rx="14" fill="#E63946"/>
-    <rect x="800" y="240" width="340" height="20" fill="#E63946"/>
-    <text x="970" y="240" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">PRODUZIONE</text>
-    <text x="970" y="295" font-size="48" text-anchor="middle">🌍</text>
-    <text x="970" y="335" font-size="14" font-family="JetBrains Mono, monospace" fill="#2D5BFF" text-anchor="middle">miosito.com</text>
+  <!-- ENV 2: STAGING -->
+  <g transform="translate(440, 230)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="320" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="0" y="0" width="320" height="200" rx="20" fill="url(#amber-fade)"/>
+    <rect x="0" y="180" width="320" height="20" fill="url(#amber-fade)"/>
 
-    <line x1="830" y1="370" x2="1110" y2="370" stroke="#E5E5E0" stroke-width="1"/>
+    <text x="30" y="50" font-size="11" font-weight="700" fill="#D97706" letter-spacing="2">02  ·  PROVA GENERALE</text>
 
-    <text x="830" y="400" font-size="12" font-weight="600" fill="#999">CHI VEDE</text>
-    <text x="830" y="425" font-size="15" fill="#1A1A1A">Tutto il mondo</text>
+    <!-- Icon: clipboard with checkmarks -->
+    <g transform="translate(160, 110)" stroke="#0F1419" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-20" y="-26" width="40" height="50" rx="3"/>
+      <rect x="-10" y="-32" width="20" height="10" rx="2"/>
+      <line x1="-12" y1="-12" x2="-6" y2="-12" stroke="#D97706" stroke-width="2"/>
+      <polyline points="-2,-12 2,-8 8,-16" stroke="#D97706" stroke-width="2"/>
+      <line x1="-12" y1="0" x2="-6" y2="0" stroke="#D97706" stroke-width="2"/>
+      <polyline points="-2,0 2,4 8,-4" stroke="#D97706" stroke-width="2"/>
+      <line x1="-12" y1="12" x2="12" y2="12" stroke="#9CA3AF" stroke-width="1.5"/>
+    </g>
 
-    <text x="830" y="465" font-size="12" font-weight="600" fill="#999">CONTIENE</text>
-    <text x="830" y="490" font-size="15" fill="#1A1A1A">Sistema vero + dati clienti</text>
+    <text x="160" y="190" font-size="22" font-weight="700" fill="#0F1419" text-anchor="middle" letter-spacing="-0.5">Dev / Staging</text>
 
-    <text x="830" y="530" font-size="12" font-weight="600" fill="#999">SE SI ROMPE</text>
-    <text x="830" y="555" font-size="15" fill="#1A1A1A">Email arrabbiate, soldi</text>
+    <rect x="50" y="210" width="220" height="32" rx="6" fill="#F3F4F6"/>
+    <text x="160" y="231" font-size="13" font-family="'JetBrains Mono', monospace" fill="#0F1419" text-anchor="middle">dev.miosito.com</text>
 
-    <text x="830" y="595" font-size="12" font-weight="600" fill="#999">SPERIMENTA</text>
-    <text x="830" y="620" font-size="15" fill="#E63946" font-weight="600">Niente. Mai.</text>
+    <line x1="30" y1="270" x2="290" y2="270" stroke="#E5E7EB"/>
 
-    <rect x="830" y="650" width="280" height="36" rx="8" fill="#E63946" opacity="0.12"/>
-    <text x="970" y="673" font-size="13" fill="#A0202B" text-anchor="middle">Qui vivono i clienti veri</text>
+    <g font-size="11" font-weight="600" letter-spacing="1.5" fill="#9CA3AF">
+      <text x="30" y="296">CHI VEDE</text>
+      <text x="30" y="358">CONTIENE</text>
+      <text x="30" y="420">SE SI ROMPE</text>
+    </g>
+    <g font-size="14" fill="#0F1419" letter-spacing="-0.2">
+      <text x="30" y="318">Tu + il tuo team</text>
+      <text x="30" y="380">Copia recente · dati finti</text>
+      <text x="30" y="442">Imbarazzo interno</text>
+    </g>
+
+    <rect x="30" y="465" width="260" height="3" rx="1.5" fill="#D97706"/>
   </g>
 
-  <!-- Footer caption -->
-  <text x="600" y="760" font-size="14" fill="#666" font-style="italic" text-anchor="middle">"Funziona in localhost" non significa "funziona in produzione". Sono mondi diversi.</text>
-  <text x="600" y="785" font-size="11" fill="#999" text-anchor="middle">Vibecoding Serio · Modulo 0 · Infografica 1</text>
+  <!-- ENV 3: PRODUCTION -->
+  <g transform="translate(780, 230)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="340" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="0" y="0" width="340" height="200" rx="20" fill="url(#rose-fade)"/>
+    <rect x="0" y="180" width="340" height="20" fill="url(#rose-fade)"/>
+
+    <text x="30" y="50" font-size="11" font-weight="700" fill="#BE123C" letter-spacing="2">03  ·  IL PUBBLICO</text>
+
+    <!-- Icon: globe -->
+    <g transform="translate(170, 110)" stroke="#0F1419" stroke-width="1.5" fill="none" stroke-linecap="round">
+      <circle cx="0" cy="0" r="28"/>
+      <ellipse cx="0" cy="0" rx="11" ry="28"/>
+      <line x1="-28" y1="0" x2="28" y2="0"/>
+      <path d="M -25,-10 Q 0,-6 25,-10" stroke="#BE123C" stroke-width="1.5"/>
+      <path d="M -25,10 Q 0,6 25,10" stroke="#BE123C" stroke-width="1.5"/>
+    </g>
+
+    <text x="170" y="190" font-size="22" font-weight="700" fill="#0F1419" text-anchor="middle" letter-spacing="-0.5">Produzione</text>
+
+    <rect x="60" y="210" width="220" height="32" rx="6" fill="#F3F4F6"/>
+    <text x="170" y="231" font-size="13" font-family="'JetBrains Mono', monospace" fill="#0F1419" text-anchor="middle">miosito.com</text>
+
+    <line x1="30" y1="270" x2="310" y2="270" stroke="#E5E7EB"/>
+
+    <g font-size="11" font-weight="600" letter-spacing="1.5" fill="#9CA3AF">
+      <text x="30" y="296">CHI VEDE</text>
+      <text x="30" y="358">CONTIENE</text>
+      <text x="30" y="420">SE SI ROMPE</text>
+    </g>
+    <g font-size="14" fill="#0F1419" letter-spacing="-0.2">
+      <text x="30" y="318">Tutto il mondo</text>
+      <text x="30" y="380">Sistema vero · clienti veri</text>
+      <text x="30" y="442">Email arrabbiate. Soldi.</text>
+    </g>
+
+    <rect x="30" y="465" width="280" height="3" rx="1.5" fill="#BE123C"/>
+  </g>
+
+  <!-- Footer note -->
+  <text x="600" y="765" font-size="14" fill="#6B7280" font-style="italic" text-anchor="middle" letter-spacing="-0.2">"Funziona in localhost" non significa "funziona in produzione". Mondi diversi.</text>
+  <text x="1120" y="788" font-size="11" fill="#D1D5DB" text-anchor="end" letter-spacing="1">VIBECODING SERIO  ·  01/16</text>
 </svg>
