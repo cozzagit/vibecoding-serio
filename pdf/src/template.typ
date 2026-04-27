@@ -71,6 +71,18 @@
   // Heading styles — generous breathing
   show heading: set text(font: heading-font, weight: 700, fill: ink)
   show heading: set block(above: 1.6em, below: 0.9em)
+  // Headings cling to following content (no orphans at page bottom)
+  show heading: set block(breakable: false)
+  // Figure styling (used by infographics)
+  show figure: it => block(
+    breakable: false,
+    above: 1.8em,
+    below: 1.8em,
+  )[
+    #align(center)[#it.body]
+    #v(0.4em)
+    #align(center, text(size: 8.5pt, fill: muted, style: "italic", tracking: 0.3pt)[#it.caption])
+  ]
 
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
@@ -105,16 +117,21 @@
     text(font: mono-font, size: 0.88em, fill: rgb("#BE123C"))[#it.text],
   )
 
-  // Code blocks with generous spacing around
-  show raw.where(block: true): it => block(
-    fill: code-bg,
-    inset: (x: 14pt, y: 12pt),
-    radius: 4pt,
-    width: 100%,
-    above: 1.4em,
-    below: 1.4em,
-    text(font: mono-font, size: 8.8pt, fill: code-fg)[#it.text],
-  )
+  // Code blocks with generous spacing around — unbreakable when short
+  show raw.where(block: true): it => {
+    let lines-count = it.text.split("\n").len()
+    let is-short = lines-count <= 14
+    block(
+      fill: code-bg,
+      inset: (x: 14pt, y: 12pt),
+      radius: 4pt,
+      width: 100%,
+      above: 1.4em,
+      below: 1.4em,
+      breakable: not is-short,
+      text(font: mono-font, size: 8.8pt, fill: code-fg)[#it.text],
+    )
+  }
 
   // Strong / emphasis
   show strong: set text(weight: 700, fill: ink)
@@ -218,6 +235,7 @@
     width: 100%,
     above: 1.4em,
     below: 1.4em,
+    breakable: false,
   )[
     #text(size: 8pt, weight: 700, fill: color, tracking: 1.5pt)[#label]
     #v(4pt)

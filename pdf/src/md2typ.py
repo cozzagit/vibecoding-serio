@@ -61,6 +61,52 @@ def process_inline(text):
     return text
 
 
+INFOGRAPHIC_FILES = {
+    1: "01-tre-ambienti",
+    2: "02-anatomia-sito-online",
+    3: "03-scatole-lego-codice",
+    4: "04-tre-modi-spostare-codice",
+    5: "05-dove-vive-un-sito",
+    6: "06-viaggio-del-click",
+    7: "07-danza-client-server",
+    8: "08-linguaggi-vivono-dove",
+    9: "09-triangolo-client-server-database",
+    10: "10-anatomia-pagina",
+    11: "11-componenti-navigazione",
+    12: "12-componenti-contenuto",
+    13: "13-componenti-interazione",
+    14: "14-stati-componente",
+    15: "15-decoder-status-code",
+    16: "16-dns-resolution-flow",
+}
+
+
+def maybe_infographic_block(quote_text):
+    """If a blockquote references '🎨 Infografica N: titolo',
+    return a typst figure() block with the SVG image. Otherwise return None.
+    """
+    m = re.search(r"Infografica\s+(\d+)\s*[:——-]?\s*([^.\n]+)", quote_text)
+    if not m:
+        return None
+    num = int(m.group(1))
+    if num not in INFOGRAPHIC_FILES:
+        return None
+    title = m.group(2).strip().rstrip(").,;*")
+    title = title.lstrip("*").strip()
+    # Strip stray markdown asterisks/underscores inside
+    title = re.sub(r"[*_]+", "", title)
+    title_clean = title.replace('"', "'")
+    svg = INFOGRAPHIC_FILES[num]
+    return (
+        f'#figure(\n'
+        f'  image("/assets/diagrams/{svg}.svg", width: 100%),\n'
+        f'  caption: [Infografica {num:02d} — {title_clean}],\n'
+        f'  supplement: "Infografica",\n'
+        f'  numbering: none,\n'
+        f')\n'
+    )
+
+
 def convert_table(lines):
     """Convert a markdown table to typst table."""
     if len(lines) < 2:
@@ -165,6 +211,15 @@ def convert_md(md_text):
                 quote_lines.append(inner)
                 i += 1
             quote_text = "\n".join(quote_lines).strip()
+
+            # CHECK: is this an infographic reference? Replace with figure().
+            if "🎨" in quote_text and "Infografica" in quote_text:
+                fig = maybe_infographic_block(quote_text)
+                if fig:
+                    out.append(fig)
+                    out.append("")
+                    continue
+
             # Detect kind from emoji
             if "⚠" in quote_text or "WARNING" in quote_text.upper():
                 kind = "warning"
@@ -206,13 +261,17 @@ def convert_md(md_text):
             out.append("")
             continue
 
-        # Numbered lists
+        # Numbered lists — preserve explicit numbering from source
         if re.match(r"^\s*\d+\.\s+", line):
             list_lines = []
             while i < len(lines) and (re.match(r"^\s*\d+\.\s+", lines[i]) or (lines[i].strip() == "" and i + 1 < len(lines) and re.match(r"^\s*\d+\.\s+", lines[i + 1]))):
                 if lines[i].strip():
-                    item_text = re.sub(r"^\s*\d+\.\s+", "", lines[i])
-                    list_lines.append(f"+ {process_inline(item_text)}")
+                    m_num = re.match(r"^\s*(\d+)\.\s+(.*)$", lines[i])
+                    if m_num:
+                        num = m_num.group(1)
+                        item_text = m_num.group(2)
+                        # Use enum.item with explicit number to preserve source numbering
+                        list_lines.append(f"#enum.item({num})[{process_inline(item_text)}]")
                 i += 1
             out.extend(list_lines)
             out.append("")
