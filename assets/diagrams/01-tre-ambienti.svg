@@ -31,14 +31,14 @@
   <text x="80" y="125" font-size="38" font-weight="700" fill="#0F1419" letter-spacing="-1.2">I tre ambienti</text>
   <text x="80" y="160" font-size="17" fill="#6B7280" letter-spacing="-0.2">Dove vive il codice nelle diverse fasi della sua vita</text>
 
-  <!-- Deploy flow indicator -->
-  <g transform="translate(80, 195)">
+  <!-- Deploy flow indicator (zona contenuto y>=200) -->
+  <g transform="translate(80, 215)">
     <text x="0" y="0" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="3">DEPLOY  ·  IL CODICE SI MUOVE  →</text>
     <line x1="280" y1="-4" x2="1040" y2="-4" stroke="#0F1419" stroke-width="1" stroke-dasharray="2 4" opacity="0.3"/>
   </g>
 
   <!-- ENV 1: LOCALHOST -->
-  <g transform="translate(80, 230)" filter="url(#soft-shadow)">
+  <g transform="translate(80, 240)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="340" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
     <rect x="0" y="0" width="340" height="200" rx="20" fill="url(#green-fade)"/>
     <rect x="0" y="180" width="340" height="20" fill="url(#green-fade)"/>
@@ -84,7 +84,7 @@
   </g>
 
   <!-- ENV 2: STAGING -->
-  <g transform="translate(440, 230)" filter="url(#soft-shadow)">
+  <g transform="translate(440, 240)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="320" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
     <rect x="0" y="0" width="320" height="200" rx="20" fill="url(#amber-fade)"/>
     <rect x="0" y="180" width="320" height="20" fill="url(#amber-fade)"/>
@@ -124,7 +124,7 @@
   </g>
 
   <!-- ENV 3: PRODUCTION -->
-  <g transform="translate(780, 230)" filter="url(#soft-shadow)">
+  <g transform="translate(780, 240)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="340" height="490" rx="20" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
     <rect x="0" y="0" width="340" height="200" rx="20" fill="url(#rose-fade)"/>
     <rect x="0" y="180" width="340" height="20" fill="url(#rose-fade)"/>
