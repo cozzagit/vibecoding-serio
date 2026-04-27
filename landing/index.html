@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibecoding Serio — Il manuale per chi costruisce siti con l'AI</title>
+  <meta name="description" content="Smetti di copiare prompt. Inizia a capire cosa stai costruendo. Il manuale pratico in italiano per freelancer e founder che usano Claude, Cursor, Bolt, Lovable.">
+  <meta name="keywords" content="vibecoding, claude, cursor, bolt, lovable, sviluppo web italiano, fondamenti web, manuale programmazione AI">
+  <meta property="og:title" content="Vibecoding Serio">
+  <meta property="og:description" content="Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vibecodingserio.vibecanyon.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='75' text-anchor='middle' font-family='monospace'>{}</text></svg>">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo"><span class="logo-bracket">{</span> Vibecoding <em>Serio</em> <span class="logo-bracket">}</span></a>
+    <ul class="nav-links">
+      <li><a href="#contenuto">Contenuto</a></li>
+      <li><a href="#per-chi">Per chi</a></li>
+      <li><a href="#prezzo">Prezzo</a></li>
+      <li><a href="#preorder" class="btn-mini">Pre-order</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <div class="container">
+    <span class="badge">In scrittura · Lancio giugno 2026</span>
+    <h1>Smetti di copiare prompt.<br><span class="accent">Inizia a capire cosa stai costruendo.</span></h1>
+    <p class="lead">
+      Il manuale pratico in italiano per chi crea siti e app con <strong>Claude, Cursor, Bolt, Lovable</strong> — ma quando qualcosa si rompe non sa neanche dove guardare.
+    </p>
+    <div class="cta-group">
+      <a href="#preorder" class="btn btn-primary">Riserva il tuo posto · 19€ early bird</a>
+      <a href="#contenuto" class="btn btn-ghost">Vedi cosa c'è dentro ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>~213</strong><span>pagine</span></div>
+      <div><strong>9</strong><span>moduli</span></div>
+      <div><strong>16</strong><span>infografiche</span></div>
+      <div><strong>130+</strong><span>termini</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- IL DOLORE -->
+<section class="problem">
+  <div class="container">
+    <h2>Ti suona familiare?</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="problem-icon">😅</span>
+        <p>Hai consegnato un sito al cliente. <strong>Qualcosa si è rotto in produzione</strong>, ma in localhost funzionava. Non sai da dove iniziare.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🤯</span>
+        <p>Claude ti ha scritto 200 righe di codice. <strong>Non capisci cosa fanno</strong>, ma le hai messe online. E ora il login dimentica gli utenti.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">😤</span>
+        <p>Apri la console e vedi <code>CORS policy blocked</code>. <strong>Non sai cosa significhi</strong>. Chiedi a Claude. Provi 5 fix che peggiorano la situazione.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🫠</span>
+        <p>Il cliente chiede di "cambiare l'header". <strong>Non sei sicuro di cosa sia un header</strong>, e il prompt che fai a Claude ti restituisce qualcosa che non c'entra.</p>
+      </div>
+    </div>
+    <p class="problem-conclusion">
+      Non è colpa tua. <strong>Le AI hanno reso facilissimo costruire siti senza prima capire come funzionano.</strong> Questo manuale ti dà i fondamenti che ti mancano — quelli che separano un progetto fragile da uno che regge.
+    </p>
+  </div>
+</section>
+
+<!-- PER CHI -->
+<section id="per-chi" class="audience">
+  <div class="container">
+    <h2>Per chi è (e per chi non è)</h2>
+    <div class="audience-grid">
+      <div class="audience-yes">
+        <h3>✅ È per te se…</h3>
+        <ul>
+          <li>Hai creato qualcosa con un'AI ma non sai spiegare come è fatto</li>
+          <li>Sei un freelancer / founder solo che vende siti o automazioni a clienti reali</li>
+          <li>Hai paura del momento "qualcosa si è rotto" perché non sai dove guardare</li>
+          <li>Vuoi parlare con uno sviluppatore vero senza sembrare un ciarlatano</li>
+          <li>Hai smesso di seguire tutorial perché ti annoiano e vuoi solo capire</li>
+        </ul>
+      </div>
+      <div class="audience-no">
+        <h3>❌ NON è per te se…</h3>
+        <ul>
+          <li>Sei già uno sviluppatore senior — questo libro ti annoierebbe</li>
+          <li>Vuoi un corso "diventa programmatore in 30 giorni"</li>
+          <li>Cerchi tutorial passo-passo su un singolo framework</li>
+          <li>Vuoi scrivere codice senza capire l'architettura sottostante (allora rimani col vibecoding ingenuo)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COSA IMPARI -->
+<section id="contenuto" class="content">
+  <div class="container">
+    <h2>Cosa c'è dentro</h2>
+    <p class="section-lead">9 moduli, 2 glossari (130+ termini), 16 infografiche, 4 appendici pratiche.</p>
+
+    <div class="modules">
+
+      <article class="module">
+        <span class="module-number">00</span>
+        <h3>Le parole che ti servono per partire</h3>
+        <p>Cosa significa davvero "deploy", "produzione", "ambiente". Differenza tra <strong>server, hosting, dominio, DNS</strong>. Cos'è FTP, SSH, Git. Cos'è una libreria, un framework, un pacchetto, un'API, un SDK.</p>
+        <span class="module-meta">14 pagine · 4 capitoli · 4 infografiche</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">01</span>
+        <h3>Cosa sta succedendo davvero quando premi "Deploy"</h3>
+        <p>La mappa del territorio: browser, DNS, CDN, server, database. Cosa fa Claude quando scrivi un prompt. Il viaggio del click in 8 passi.</p>
+        <span class="module-meta">14 pagine · 4 capitoli · 2 infografiche</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">02</span>
+        <h3>Client e server: chi fa cosa</h3>
+        <p>La distinzione più importante che il vibecoder non capisce. Quali linguaggi vivono lato browser (React, Vue, HTML/CSS), quali lato server (Node, PHP, Python). Perché JavaScript è speciale (gira in entrambi).</p>
+        <span class="module-meta">18 pagine · 5 capitoli · 3 infografiche</span>
+      </article>
+
+      <article class="module module-highlight">
+        <span class="module-number">03</span>
+        <h3>L'anatomia di una pagina web</h3>
+        <p>Modulo super-visivo. Disegno di una pagina-tipo annotato con TUTTI i nomi corretti: <strong>header, navbar, sidebar, hero, card, modal, drawer, accordion, toast, breadcrumb, stepper, skeleton loader…</strong> Imparerai a descrivere ciò che vuoi a Claude in modo che lui capisca al primo colpo.</p>
+        <span class="module-meta">22 pagine · 5 capitoli · 5 infografiche · ⭐ Modulo bandiera</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">04</span>
+        <h3>Il browser è stupido (ma fa tutto lui)</h3>
+        <p>HTML, CSS, JavaScript, DOM, React. Server Components vs Client Components in Next.js. Perché il tuo CSS è bello su Figma e brutto su iPhone SE.</p>
+        <span class="module-meta">18 pagine · 5 capitoli</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">05</span>
+        <h3>Il server è il cameriere che nessuno vede</h3>
+        <p>Cos'è un'API REST con la metafora del menù del ristorante. I verbi HTTP (GET, POST, PUT, DELETE). I codici di stato decifrati: 200, 404, 401, 500. Headers, body, JSON.</p>
+        <span class="module-meta">20 pagine · 5 capitoli · 1 infografica</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">06</span>
+        <h3>Il database non è un foglio Excel (quasi)</h3>
+        <p>Tabelle, righe, chiavi primarie. SQL in 10 minuti. Differenza tra <strong>SQL e NoSQL</strong>, Supabase vs Firebase. Cosa è una migration. Backup senza piangere.</p>
+        <span class="module-meta">18 pagine · 5 capitoli</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">07</span>
+        <h3>Il viaggio del click in produzione</h3>
+        <p>DNS spiegato bene. HTTPS e certificati SSL. Nginx come reverse proxy. Variabili d'ambiente. Cookie, sessioni, JWT. CORS in 3 paragrafi.</p>
+        <span class="module-meta">22 pagine · 6 capitoli · 1 infografica</span>
+      </article>
+
+      <article class="module">
+        <span class="module-number">08</span>
+        <h3>Parlare a Claude come uno sviluppatore</h3>
+        <p>Tutto quello che hai imparato si traduce in prompt migliori. Pattern fisso: prompt vago → prompt informato. Spiegare un bug senza sapere il bug. Il ciclo debug del vibecoder serio.</p>
+        <span class="module-meta">16 pagine · 5 capitoli</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5 QUICK WINS -->
+<section class="quickwins">
+  <div class="container">
+    <h2>I 5 capitoli che da soli valgono il libro</h2>
+    <p class="section-lead">Risolvono problemi che hai avuto la settimana scorsa.</p>
+    <ol class="quickwins-list">
+      <li>
+        <h4>Perché il tuo sito è bellissimo in localhost e si rompe in produzione</h4>
+        <p>I 5 motivi più frequenti del "non funziona dopo deploy". Diagnostica in 5 minuti.</p>
+      </li>
+      <li>
+        <h4>Cosa è davvero un'API REST e perché la tua app si pianta a chiamarla</h4>
+        <p>Il momento "finalmente capisco" del lettore. La metafora del menù del ristorante che funziona davvero.</p>
+      </li>
+      <li>
+        <h4>Perché il tuo login non ricorda l'utente (e cosa sono i cookie)</h4>
+        <p>Sessions, JWT, cookie httpOnly. Spiegato senza piangere.</p>
+      </li>
+      <li>
+        <h4>Il tuo database ha perso i dati. Perché e come non succede più</h4>
+        <p>La paura primordiale del freelancer. Strategie di backup per i 3 casi più comuni.</p>
+      </li>
+      <li>
+        <h4>CORS: l'errore più odiato spiegato in modo che tu possa fixarlo da solo</h4>
+        <p>Rosso in console, messaggio incomprensibile. Questo capitolo ti dà il contesto per fixarlo in 1 prompt invece di 8.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="bonus">
+  <div class="container">
+    <h2>Più 4 appendici pratiche</h2>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <h4>📋 Cheat Sheet del Debug</h4>
+        <p>Tabella stampabile: per ogni errore frequente, dove guardare e cosa dire a Claude.</p>
+      </div>
+      <div class="bonus-card">
+        <h4>✅ Checklist Pre-Deploy in 15 punti</h4>
+        <p>Variabili .env, HTTPS, CORS, backup, errori console, robots.txt, sitemap…</p>
+      </div>
+      <div class="bonus-card">
+        <h4>💬 I 10 Prompt da Salvare</h4>
+        <p>Prompt copiabili Claude-ready per debug API, fix CORS, autenticazione, upload file.</p>
+      </div>
+      <div class="bonus-card">
+        <h4>🇮🇹 GDPR per Vibecoder Italiani</h4>
+        <p>Cookie banner, privacy policy, dove vivono i dati. Tutto in 2 pagine pratiche.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 GLOSSARI -->
+<section class="glossari">
+  <div class="container">
+    <h2>2 glossari ricchi che diventano il tuo riferimento</h2>
+    <div class="glossari-grid">
+      <div class="glossario-card">
+        <h3>📚 Glossario 1 — Programmazione &amp; architettura</h3>
+        <p>~80 termini organizzati in 7 categorie:</p>
+        <ul>
+          <li>Ambienti e deploy (localhost, staging, prod, build, CI/CD)</li>
+          <li>Infrastruttura (server, hosting, VPS, dominio, DNS, CDN)</li>
+          <li>Trasferimento codice (FTP, SSH, Git)</li>
+          <li>Linguaggi e framework (React, PHP, Python, Node, Laravel…)</li>
+          <li>Backend (API, REST, GraphQL, webhook, microservizi)</li>
+          <li>Sicurezza (HTTPS, JWT, CORS, OAuth, hashing)</li>
+          <li>Database (SQL, NoSQL, ORM, migration, backup)</li>
+        </ul>
+      </div>
+      <div class="glossario-card">
+        <h3>🎨 Glossario 2 — Anatomia di una pagina web</h3>
+        <p>~50 termini di UI organizzati per zona:</p>
+        <ul>
+          <li>Layout (header, footer, main, sidebar, navigation)</li>
+          <li>Navigazione (navbar, breadcrumb, tab, stepper, hamburger)</li>
+          <li>Contenuto (hero, card, banner, carousel, accordion, table)</li>
+          <li>Interazione (modal, drawer, dropdown, form, button)</li>
+          <li>Feedback (toast, snackbar, spinner, skeleton, empty state)</li>
+          <li>Tipografia e layout fine</li>
+        </ul>
+      </div>
+    </div>
+    <p class="glossari-note">Per ogni voce: nome italiano + inglese, descrizione, e <strong>"come usarlo nel prompt a Claude"</strong>.</p>
+  </div>
+</section>
+
+<!-- INFOGRAFICHE -->
+<section class="infografiche">
+  <div class="container">
+    <h2>16 infografiche che ti restano in testa</h2>
+    <p class="section-lead">Non un libro denso di paragrafi. Un manuale visivo, fatto per essere consultato quando ti serve.</p>
+    <div class="info-list">
+      <div>1. I 3 ambienti (localhost / staging / prod)</div>
+      <div>2. Anatomia di un sito online</div>
+      <div>3. Le scatole di Lego del codice</div>
+      <div>4. Da localhost al server in 3 modi</div>
+      <div>5. Dove vive un sito</div>
+      <div>6. Il viaggio del click</div>
+      <div>7. La danza client-server</div>
+      <div>8. Quali linguaggi vivono dove</div>
+      <div>9. Triangolo client-server-database</div>
+      <div class="info-highlight">10. ⭐ Anatomia di una pagina (poster A2 nel Bundle Pro)</div>
+      <div>11. Componenti di navigazione</div>
+      <div>12. Componenti di contenuto</div>
+      <div>13. Componenti di interazione</div>
+      <div>14. Stati di un componente</div>
+      <div>15. Decoder degli status code HTTP</div>
+      <div>16. DNS resolution flow</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="prezzo" class="pricing">
+  <div class="container">
+    <h2>Prezzo</h2>
+    <p class="section-lead">Tre opzioni — la prima è il tuo bonus per esserci sin dall'inizio.</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-card pricing-early">
+        <span class="pricing-tag">Solo per i primi 50</span>
+        <h3>Founding Member</h3>
+        <p class="price"><span class="price-old">29€</span> <strong>19€</strong></p>
+        <ul>
+          <li>Manuale completo PDF</li>
+          <li>Tutte le 16 infografiche</li>
+          <li>Cheat Sheet stampabili</li>
+          <li>Aggiornamenti gratuiti a vita</li>
+          <li><strong>Il tuo nome nei ringraziamenti</strong></li>
+        </ul>
+        <a href="#preorder" class="btn btn-primary">Riserva ora</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Standard</h3>
+        <p class="price"><strong>29€</strong></p>
+        <ul>
+          <li>Manuale completo PDF</li>
+          <li>Tutte le 16 infografiche</li>
+          <li>Cheat Sheet stampabili</li>
+          <li>Aggiornamenti gratuiti</li>
+        </ul>
+        <a href="#preorder" class="btn btn-ghost">Disponibile al lancio</a>
+      </div>
+
+      <div class="pricing-card pricing-pro">
+        <h3>Bundle Pro</h3>
+        <p class="price"><strong>49€</strong></p>
+        <ul>
+          <li>Tutto incluso nello Standard</li>
+          <li><strong>Poster A2 stampabile</strong> "Anatomia di una pagina"</li>
+          <li>30 prompt template Claude-ready (Notion DB)</li>
+          <li>Accesso al canale Telegram riservato</li>
+          <li>Sessioni Q&A mensili in diretta</li>
+        </ul>
+        <a href="#preorder" class="btn btn-ghost">Disponibile al lancio</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREORDER -->
+<section id="preorder" class="preorder">
+  <div class="container">
+    <div class="preorder-card">
+      <h2>Vuoi essere avvisato al lancio?</h2>
+      <p>
+        Il manuale esce a <strong>giugno 2026</strong>. Lasciami la tua email e ti scrivo io quando è pronto, con un link al pre-order Founding Member a <strong>19€</strong> (sconto -34%) prima che venga al pubblico a 29€.
+      </p>
+      <form action="mailto:luca.cozza@gmail.com?subject=Pre-order%20Vibecoding%20Serio" method="post" enctype="text/plain" class="preorder-form">
+        <input type="email" name="email" placeholder="tua@email.it" required>
+        <button type="submit" class="btn btn-primary">Avvisami al lancio</button>
+      </form>
+      <p class="preorder-note">Niente spam. Una sola email. Cancellazione con 1 click.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT LUCA -->
+<section class="about">
+  <div class="container">
+    <h2>Chi sono</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Mi chiamo <strong>Luca Cozza</strong>. Sono uno sviluppatore full-stack italiano. Ho costruito e deployato <strong>oltre 25 progetti</strong> reali — SaaS B2B, marketplace, piattaforme di gestione cantieri, app di sicurezza sul lavoro, giochi browser. Lavoro su VPS Aruba, gestisco database Postgres, scrivo in TypeScript, Python e PHP.</p>
+        <p>Negli ultimi mesi ho visto sempre più freelancer e founder italiani usare Claude e Cursor per costruire prodotti veri — alcuni con idee ottime, ma con architetture fragili che si rompono al primo deploy serio.</p>
+        <p><strong>Questo manuale è quello che avrei voluto leggere io quando ho cominciato</strong>: niente teoria accademica, niente storia di Internet dal 1969, niente tutorial su un singolo framework. Solo i concetti che servono per consegnare progetti che reggono.</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><strong>25+</strong><span>progetti deployati</span></div>
+        <div class="about-stat"><strong>10+</strong><span>anni di sviluppo full-stack</span></div>
+        <div class="about-stat"><strong>3</strong><span>SaaS LIVE in produzione</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h2>Domande frequenti</h2>
+    <details>
+      <summary>Devo già saper programmare per leggerlo?</summary>
+      <p>No. Il libro parte da zero — anzi, è scritto apposta per chi <em>non</em> sa programmare ma sta costruendo cose con l'AI. Se sei già senior, ti annoierebbe.</p>
+    </details>
+    <details>
+      <summary>In che formato esce?</summary>
+      <p>PDF (versione principale). Una versione lite EPUB sarà su Amazon KDP a 4.99€. Il PDF è ottimizzato per lettura su tablet/laptop e per la stampa.</p>
+    </details>
+    <details>
+      <summary>Quante pagine?</summary>
+      <p>Circa 213 pagine, 8-9 ore di lettura. Pensato per essere letto a pezzi (lineare, Quick Wins, riferimento). I glossari da soli sono ~32 pagine, consultabili come dizionario.</p>
+    </details>
+    <details>
+      <summary>Aggiornamenti?</summary>
+      <p>Gli stack tech cambiano in fretta. Per chi compra ci saranno aggiornamenti gratuiti a vita (versione 1.1, 2.0…). Non rifaccio mai pagare la stessa edizione.</p>
+    </details>
+    <details>
+      <summary>Posso fare un reso se non mi piace?</summary>
+      <p>Sì. Garanzia soddisfatti o rimborsati 30 giorni, senza domande. Mi paghi solo se ti è davvero utile.</p>
+    </details>
+    <details>
+      <summary>Posso comprarlo in più copie per la mia agenzia?</summary>
+      <p>Sì, scrivimi a luca.cozza@gmail.com per pricing team.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p><strong>{ Vibecoding <em>Serio</em> }</strong> — il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo.</p>
+    <p class="footer-meta">
+      Made in Lombardia 🇮🇹 · luca.cozza@gmail.com · <a href="https://github.com/cozzagit/vibecoding-serio">repo open</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
