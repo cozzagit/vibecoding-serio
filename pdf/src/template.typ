@@ -44,7 +44,7 @@
     paper: "us-letter",  // overridden below
     width: 6in,
     height: 9in,
-    margin: (top: 2.4cm, bottom: 2.2cm, inside: 2.2cm, outside: 1.8cm),
+    margin: (top: 2cm, bottom: 1.8cm, inside: 1.6cm, outside: 1.4cm),
     fill: bg,
   )
 
@@ -153,25 +153,39 @@
   // Links
   show link: it => text(fill: accent-blue, underline(it))
 
-  // Page numbering & headers
+  // Page numbering & headers — dynamic via heading queries
   set page(
     header: context {
-      let page-num = counter(page).get().first()
-      if page-num <= 6 [] else {
-        let header-text = state("module-name", "")
-        let module-name = header-text.get()
-        if calc.even(page-num) {
-          align(left, text(size: 8pt, fill: light, tracking: 1pt, upper("Vibecoding Serio")))
-        } else {
-          align(right, text(size: 8pt, fill: light, tracking: 1pt, upper(module-name)))
-        }
+      let pn = here().page()
+      // Skip header on first ~5 pages (cover, title, colophon, indice, prefazione)
+      if pn <= 5 { return [] }
+
+      // Find current H1 (modulo / parte) before this page
+      let h1s = query(selector(heading.where(level: 1)).before(here()))
+      let current-title = if h1s.len() > 0 {
+        h1s.last().body
+      } else {
+        [Vibecoding Serio]
       }
+
+      // Two-column header: left = book name, right = current chapter
+      grid(
+        columns: (1fr, auto),
+        align: (left, right),
+        text(size: 8pt, fill: light, tracking: 1.5pt)[VIBECODING SERIO],
+        text(size: 8pt, fill: light, tracking: 1pt)[#current-title],
+      )
+      v(2pt)
+      line(length: 100%, stroke: 0.4pt + border-c)
     },
     footer: context {
-      let page-num = counter(page).get().first()
-      if page-num <= 2 [] else {
-        align(center, text(size: 9pt, fill: muted)[#counter(page).display("1")])
-      }
+      let pn = here().page()
+      if pn <= 3 { return [] }
+      align(center)[
+        #text(size: 9pt, fill: muted, font: heading-font, weight: 500)[
+          #counter(page).display("1")
+        ]
+      ]
     },
   )
 
@@ -252,43 +266,47 @@
   text(font: heading-font, size: 60pt, weight: 700, fill: accent-amber)[#letter]
 }
 
-// Front matter pages
-#let cover-page() = {
-  set page(
-    margin: 0pt,
-    fill: bg,
-    header: none,
-    footer: none,
-  )
-  set par(justify: false, leading: 0.5em)
-
-  // Cover layout
-  block(
+// Front matter pages — COVER with illustration
+// Uses page() function (local override, does NOT persist after this page)
+#let cover-page() = page(
+  margin: 0pt,
+  fill: bg,
+  header: none,
+  footer: none,
+)[
+  #set par(justify: false, leading: 0.5em)
+  #block(
     width: 100%,
     height: 100%,
-    inset: (top: 3.5cm, bottom: 3cm, left: 2.4cm, right: 2.4cm),
+    inset: (top: 1.5cm, bottom: 1.5cm, left: 1.6cm, right: 1.6cm),
   )[
-    #set align(left)
+    // Top label
     #text(size: 10pt, weight: 600, fill: muted, tracking: 4pt)[VIBECODING SERIO]
-    #v(0.3cm)
+    #v(0.15cm)
     #line(length: 8%, stroke: 1.5pt + ink)
-    #v(2.2cm)
 
-    #text(font: heading-font, size: 30pt, weight: 800, tracking: -1pt, fill: ink, hyphenate: false)[
-      Smetti di copiare #linebreak()
-      prompt.
+    // Illustration block (constrained height so title doesn't get pushed)
+    #v(0.4cm)
+    #align(center)[
+      #box(width: 100%, height: 11cm)[
+        #image("../assets/cover-art.svg", height: 100%, fit: "contain")
+      ]
     ]
     #v(0.4cm)
-    #text(font: heading-font, size: 30pt, weight: 800, tracking: -1pt, fill: accent-amber, hyphenate: false)[
-      Inizia a capire #linebreak()
-      cosa stai #linebreak()
-      costruendo.
+
+    // Title block
+    #text(font: heading-font, size: 22pt, weight: 800, tracking: -0.8pt, fill: ink, hyphenate: false)[
+      Smetti di copiare prompt.
+    ]
+    #v(0.1cm)
+    #text(font: heading-font, size: 22pt, weight: 800, tracking: -0.8pt, fill: accent-amber, hyphenate: false)[
+      Inizia a capire cosa stai costruendo.
     ]
 
-    #v(1.2cm)
-    #text(size: 12pt, fill: muted, style: "italic", hyphenate: false)[
-      Il manuale per chi costruisce siti con #linebreak()
-      l'AI ma non capisce cosa sta costruendo.
+    #v(0.4cm)
+    #text(size: 10.5pt, fill: muted, style: "italic", hyphenate: false)[
+      Il manuale per chi costruisce siti con l'AI #linebreak()
+      ma non capisce cosa sta costruendo.
     ]
 
     #v(1fr)
@@ -306,38 +324,41 @@
       ],
     )
   ]
-
-  pagebreak()
-}
+]
 
 // Title page
-#let title-page() = {
-  set page(margin: (top: 4cm, bottom: 3cm, left: 3cm, right: 3cm), header: none, footer: none)
-  set par(justify: false, leading: 0.5em)
-  set align(center)
-  v(3cm)
-  text(font: heading-font, size: 36pt, weight: 700, tracking: -1pt, hyphenate: false)[Vibecoding Serio]
-  v(0.5cm)
-  line(length: 8%, stroke: 1pt + ink)
-  v(0.5cm)
-  text(size: 13pt, fill: muted, style: "italic", hyphenate: false)[
+#let title-page() = page(
+  margin: (top: 4cm, bottom: 3cm, left: 3cm, right: 3cm),
+  header: none,
+  footer: none,
+)[
+  #set par(justify: false, leading: 0.5em)
+  #set align(center)
+  #v(3cm)
+  #text(font: heading-font, size: 36pt, weight: 700, tracking: -1pt, hyphenate: false)[Vibecoding Serio]
+  #v(0.5cm)
+  #line(length: 8%, stroke: 1pt + ink)
+  #v(0.5cm)
+  #text(size: 13pt, fill: muted, style: "italic", hyphenate: false)[
     Il manuale per chi costruisce siti con l'AI #linebreak()
     ma non capisce cosa sta costruendo.
   ]
-  v(1fr)
-  text(size: 11pt, weight: 600)[Luca Cozza]
-  v(0.3cm)
-  text(size: 10pt, fill: muted)[Edizione 1.0 — 2026]
-  v(1cm)
-  pagebreak()
-}
+  #v(1fr)
+  #text(size: 11pt, weight: 600)[Luca Cozza]
+  #v(0.3cm)
+  #text(size: 10pt, fill: muted)[Edizione 1.0 — 2026]
+  #v(1cm)
+]
 
 // Colophon
-#let colophon() = {
-  set page(margin: (top: 4cm, bottom: 3cm, left: 3cm, right: 3cm), header: none, footer: none)
-  set align(left)
-  v(2fr)
-  text(size: 9pt, fill: muted)[
+#let colophon() = page(
+  margin: (top: 4cm, bottom: 3cm, left: 3cm, right: 3cm),
+  header: none,
+  footer: none,
+)[
+  #set align(left)
+  #v(2fr)
+  #text(size: 9pt, fill: muted)[
     *Vibecoding Serio* #linebreak()
     Il manuale per chi costruisce siti con l'AI ma non capisce cosa sta costruendo. #linebreak()
     #linebreak()
@@ -352,6 +373,5 @@
     luca.cozza\@gmail.com #linebreak()
     github.com/cozzagit/vibecoding-serio
   ]
-  v(1fr)
-  pagebreak()
-}
+  #v(1fr)
+]

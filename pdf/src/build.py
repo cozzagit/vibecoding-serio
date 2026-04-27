@@ -78,14 +78,14 @@ def main():
         '#colophon()',
         '',
         '// ===== TABLE OF CONTENTS =====',
-        '#set page(margin: (top: 3cm, bottom: 2.5cm, x: 2.4cm), header: none, footer: none)',
-        '#v(2cm)',
-        '#text(font: heading-font, size: 32pt, weight: 700, tracking: -0.5pt)[Indice]',
-        '#v(0.5cm)',
-        '#line(length: 15%, stroke: 1.5pt + ink)',
-        '#v(1.5cm)',
-        '#outline(title: none, depth: 2, indent: 1em)',
-        '#pagebreak()',
+        '#page(margin: (top: 3cm, bottom: 2.5cm, x: 2cm), header: none, footer: none)[',
+        '  #v(1cm)',
+        '  #text(font: heading-font, size: 32pt, weight: 700, tracking: -0.5pt)[Indice]',
+        '  #v(0.5cm)',
+        '  #line(length: 15%, stroke: 1.5pt + ink)',
+        '  #v(1.2cm)',
+        '  #outline(title: none, depth: 2, indent: 1em)',
+        ']',
         '',
         '// ===== PREFACE =====',
         '#v(2cm)',
@@ -186,17 +186,17 @@ def main():
 
     # Backmatter
     book_lines.append('// ===== BACKMATTER =====')
-    book_lines.append('#pagebreak(weak: true)')
-    book_lines.append('#set page(margin: (top: 4cm, bottom: 3cm, x: 2.4cm), header: none, footer: none)')
-    book_lines.append('#v(3cm)')
-    book_lines.append('#align(center)[')
-    book_lines.append('  #text(font: mono-font, size: 12pt, fill: muted)[\\{ vibecoding • serio \\}]')
-    book_lines.append('  #v(0.5cm)')
-    book_lines.append('  #text(size: 11pt, fill: muted, style: "italic")[Fine del libro.]')
-    book_lines.append('  #v(2cm)')
-    book_lines.append('  #text(size: 14pt)[Buon vibecoding.]')
-    book_lines.append('  #v(0.3cm)')
-    book_lines.append('  #text(size: 14pt, weight: 700)[Sul serio.]')
+    book_lines.append('#page(margin: (top: 4cm, bottom: 3cm, x: 2.4cm), header: none, footer: none)[')
+    book_lines.append('  #v(3cm)')
+    book_lines.append('  #align(center)[')
+    book_lines.append('    #text(font: mono-font, size: 12pt, fill: muted)[\\{ vibecoding • serio \\}]')
+    book_lines.append('    #v(0.5cm)')
+    book_lines.append('    #text(size: 11pt, fill: muted, style: "italic")[Fine del libro.]')
+    book_lines.append('    #v(2cm)')
+    book_lines.append('    #text(size: 14pt)[Buon vibecoding.]')
+    book_lines.append('    #v(0.3cm)')
+    book_lines.append('    #text(size: 14pt, weight: 700)[Sul serio.]')
+    book_lines.append('  ]')
     book_lines.append(']')
     book_lines.append('')
 

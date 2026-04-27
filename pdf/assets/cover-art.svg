@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" font-family="'Inter Tight', 'Inter', sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="inkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F1419"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.15"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background warm white -->
+  <rect width="600" height="900" fill="#FAFAF7"/>
+
+  <!-- Subtle grid pattern (like blueprint) -->
+  <g opacity="0.04" stroke="#0F1419" stroke-width="0.5" fill="none">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="400" x2="600" y2="400"/>
+    <line x1="0" y1="500" x2="600" y2="500"/>
+    <line x1="0" y1="600" x2="600" y2="600"/>
+    <line x1="0" y1="700" x2="600" y2="700"/>
+    <line x1="0" y1="800" x2="600" y2="800"/>
+    <line x1="100" y1="0" x2="100" y2="900"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="500" y1="0" x2="500" y2="900"/>
+  </g>
+
+  <!-- =========== CENTRAL ILLUSTRATION =========== -->
+  <!-- Halo glow behind the central network -->
+  <ellipse cx="300" cy="430" rx="280" ry="240" fill="url(#glow)"/>
+
+  <!-- Floating code fragments (BACKGROUND) -->
+  <g opacity="0.45" font-family="'JetBrains Mono', monospace">
+    <!-- top-left fragment -->
+    <g transform="translate(40, 220)" font-size="11" fill="#9CA3AF">
+      <text x="0" y="0">function build() {</text>
+      <text x="14" y="16">if (you.understand)</text>
+      <text x="28" y="32">return ship();</text>
+      <text x="0" y="48">}</text>
+    </g>
+    <!-- top-right fragment -->
+    <g transform="translate(420, 200)" font-size="11" fill="#9CA3AF">
+      <text x="0" y="0">const prompt = </text>
+      <text x="0" y="16">  await ai.ask(</text>
+      <text x="0" y="32">    "fammi un sito"</text>
+      <text x="0" y="48">  );</text>
+    </g>
+    <!-- bottom-left fragment -->
+    <g transform="translate(50, 620)" font-size="11" fill="#9CA3AF">
+      <text x="0" y="0">SELECT * FROM</text>
+      <text x="0" y="16">  knowledge</text>
+      <text x="0" y="32">WHERE depth = 'true';</text>
+    </g>
+    <!-- bottom-right fragment -->
+    <g transform="translate(420, 640)" font-size="11" fill="#9CA3AF">
+      <text x="0" y="0">&lt;header&gt;</text>
+      <text x="0" y="16">  &lt;h1&gt;Serio&lt;/h1&gt;</text>
+      <text x="0" y="32">&lt;/header&gt;</text>
+    </g>
+  </g>
+
+  <!-- Brackets / code symbols floating -->
+  <g font-family="'JetBrains Mono', monospace" opacity="0.4">
+    <text x="60" y="340" font-size="38" font-weight="700" fill="#D97706">{</text>
+    <text x="528" y="500" font-size="38" font-weight="700" fill="#D97706">}</text>
+    <text x="40" y="500" font-size="22" fill="#9CA3AF">&lt;/&gt;</text>
+    <text x="540" y="350" font-size="22" fill="#9CA3AF">=&gt;</text>
+    <text x="80" y="700" font-size="20" fill="#9CA3AF">;</text>
+    <text x="510" y="280" font-size="20" fill="#9CA3AF">.</text>
+  </g>
+
+  <!-- =========== NEURAL NETWORK / BRAIN =========== -->
+  <g transform="translate(300, 430)" filter="url(#shadow)">
+
+    <!-- Outer rounded container -->
+    <rect x="-160" y="-130" width="320" height="260" rx="24" fill="#FFFFFF" stroke="#0F1419" stroke-width="2"/>
+
+    <!-- Header bar (window chrome) -->
+    <rect x="-160" y="-130" width="320" height="32" rx="24" fill="#0F1419"/>
+    <rect x="-160" y="-110" width="320" height="12" fill="#0F1419"/>
+
+    <!-- 3 dots -->
+    <circle cx="-142" cy="-114" r="4" fill="#BE123C"/>
+    <circle cx="-128" cy="-114" r="4" fill="#D97706"/>
+    <circle cx="-114" cy="-114" r="4" fill="#0D9488"/>
+
+    <!-- Window title -->
+    <text x="0" y="-110" font-size="10" font-weight="600" fill="#9CA3AF" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="2">vibecoding.serio</text>
+
+    <!-- =========== INNER NETWORK / NEURAL GRAPH =========== -->
+    <!-- Connection lines BETWEEN nodes (drawn first so nodes overlap on top) -->
+    <g stroke="#D97706" stroke-width="1.5" fill="none" opacity="0.7">
+      <!-- Layer 1 (left, 3 nodes) to Layer 2 (middle, 4 nodes) -->
+      <line x1="-100" y1="-50" x2="-30" y2="-65"/>
+      <line x1="-100" y1="-50" x2="-30" y2="-25"/>
+      <line x1="-100" y1="-50" x2="-30" y2="15"/>
+      <line x1="-100" y1="-50" x2="-30" y2="55"/>
+
+      <line x1="-100" y1="0" x2="-30" y2="-65"/>
+      <line x1="-100" y1="0" x2="-30" y2="-25"/>
+      <line x1="-100" y1="0" x2="-30" y2="15"/>
+      <line x1="-100" y1="0" x2="-30" y2="55"/>
+
+      <line x1="-100" y1="50" x2="-30" y2="-65"/>
+      <line x1="-100" y1="50" x2="-30" y2="-25"/>
+      <line x1="-100" y1="50" x2="-30" y2="15"/>
+      <line x1="-100" y1="50" x2="-30" y2="55"/>
+    </g>
+
+    <g stroke="#0F1419" stroke-width="1.5" fill="none" opacity="0.5">
+      <!-- Layer 2 to Layer 3 (right, 2 nodes) -->
+      <line x1="-30" y1="-65" x2="100" y2="-25"/>
+      <line x1="-30" y1="-65" x2="100" y2="25"/>
+      <line x1="-30" y1="-25" x2="100" y2="-25"/>
+      <line x1="-30" y1="-25" x2="100" y2="25"/>
+      <line x1="-30" y1="15" x2="100" y2="-25"/>
+      <line x1="-30" y1="15" x2="100" y2="25"/>
+      <line x1="-30" y1="55" x2="100" y2="-25"/>
+      <line x1="-30" y1="55" x2="100" y2="25"/>
+    </g>
+
+    <!-- Layer 1: input nodes (left, dark) -->
+    <g>
+      <circle cx="-100" cy="-50" r="9" fill="#0F1419"/>
+      <circle cx="-100" cy="0" r="9" fill="#0F1419"/>
+      <circle cx="-100" cy="50" r="9" fill="#0F1419"/>
+    </g>
+
+    <!-- Layer 2: hidden nodes (middle, amber) -->
+    <g>
+      <circle cx="-30" cy="-65" r="11" fill="url(#amberGrad)"/>
+      <circle cx="-30" cy="-25" r="11" fill="url(#amberGrad)"/>
+      <circle cx="-30" cy="15" r="11" fill="url(#amberGrad)"/>
+      <circle cx="-30" cy="55" r="11" fill="url(#amberGrad)"/>
+    </g>
+
+    <!-- Layer 3: output nodes (right, ink) -->
+    <g>
+      <circle cx="100" cy="-25" r="13" fill="#0F1419" stroke="#D97706" stroke-width="2"/>
+      <circle cx="100" cy="25" r="13" fill="#0F1419" stroke="#D97706" stroke-width="2"/>
+    </g>
+
+    <!-- Layer labels -->
+    <text x="-100" y="95" font-size="9" font-weight="600" fill="#9CA3AF" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="1">PROMPT</text>
+    <text x="-30" y="95" font-size="9" font-weight="600" fill="#D97706" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="1">SISTEMA</text>
+    <text x="100" y="95" font-size="9" font-weight="600" fill="#9CA3AF" text-anchor="middle" font-family="'JetBrains Mono', monospace" letter-spacing="1">CODICE</text>
+  </g>
+
+  <!-- =========== BOTTOM TERMINAL HINT =========== -->
+  <!-- A subtle "running" terminal line -->
+  <g transform="translate(120, 750)" opacity="0.6">
+    <rect x="0" y="0" width="360" height="36" rx="6" fill="#0F1419"/>
+    <text x="14" y="22" font-size="11" font-family="'JetBrains Mono', monospace" fill="#5EEAD4">$</text>
+    <text x="32" y="22" font-size="11" font-family="'JetBrains Mono', monospace" fill="#FFFFFF">vibecoding --understand --serious</text>
+    <rect x="320" y="14" width="6" height="12" fill="#D97706">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
