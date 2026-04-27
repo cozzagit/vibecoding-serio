@@ -1,0 +1,23 @@
+# Build output
+build/
+dist/
+*.pdf
+!assets/cover/*.pdf
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node (per landing futura)
+node_modules/
+.next/
+.astro/
+.env
+.env.local
+.env*.local
+
+# Typst cache
+.typst-cache/
+*.typ.bak
