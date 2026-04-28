@@ -41,6 +41,20 @@ body {
   overflow-x: hidden;
 }
 
+/* Scroll progress bar (fixed top) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  z-index: 200;
+  pointer-events: none;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 10px rgba(255, 122, 61, 0.6);
+}
+
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
 h1, h2, h3, h4 {
@@ -258,6 +272,9 @@ em { font-style: italic; color: var(--accent-soft); font-weight: 600; }
 }
 .hero-stats span { font-size: 0.82rem; color: var(--text-muted); }
 
+.hero-cover {
+  perspective: 1200px;
+}
 .hero-cover img {
   width: 100%;
   height: auto;
@@ -269,11 +286,10 @@ em { font-style: italic; color: var(--accent-soft); font-weight: 600; }
     -8px 8px 24px rgba(255, 122, 61, 0.08);
   border: 1px solid var(--border);
   transform: rotate(-1.5deg);
-  transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  transform-style: preserve-3d;
 }
-.hero-cover img:hover {
-  transform: rotate(0deg) scale(1.04);
-}
+/* JS handles 3D tilt on hover; default state is the slight rotation */
 
 /* === SECTIONS COMUNI === */
 section { padding: 100px 0; position: relative; }
@@ -812,14 +828,14 @@ section { padding: 100px 0; position: relative; }
   grid-template-columns: 80px 1fr;
   gap: 28px;
   align-items: start;
-  transition: all 0.25s;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.4s cubic-bezier(.2,.8,.2,1);
   position: relative;
 }
 .module:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
+/* JS handles transform (3D tilt) on hover */
 .module-num {
   font-family: 'JetBrains Mono', monospace;
   font-size: 2.4rem;

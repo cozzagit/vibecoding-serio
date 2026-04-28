@@ -501,7 +501,150 @@ function initMagneticButtons() {
 }
 
 // =====================================================
-// 7. INIT
+// 7. SCROLL PROGRESS BAR (top of viewport)
+// =====================================================
+function initScrollProgress() {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.appendChild(bar);
+
+  let ticking = false;
+  function update() {
+    const scroll = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (scroll / max) * 100 : 0;
+    bar.style.width = pct + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  update();
+}
+
+// =====================================================
+// 8. COUNTER ANIMATED (stats roll up when in view)
+// =====================================================
+function initCounters() {
+  const elements = document.querySelectorAll('.hero-stats strong, .about-stat strong, .extras-num');
+  if (!('IntersectionObserver' in window)) return;
+
+  function animate(el, target, duration = 1400) {
+    const suffix = el.dataset.suffix || '';
+    const start = performance.now();
+    const startVal = 0;
+
+    function step(now) {
+      const elapsed = now - start;
+      const t = Math.min(elapsed / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - t, 3);
+      const value = Math.floor(startVal + (target - startVal) * eased);
+      el.textContent = value + suffix;
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Parse target value from text content
+  elements.forEach((el) => {
+    const text = el.textContent.trim();
+    const match = text.match(/^(\d+)([+]?)$/);
+    if (!match) return;
+    const target = parseInt(match[1], 10);
+    const suffix = match[2] || '';
+    el.dataset.target = target;
+    el.dataset.suffix = suffix;
+    el.textContent = '0' + suffix;
+  });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && !e.target.dataset.animated) {
+        e.target.dataset.animated = '1';
+        animate(e.target, parseInt(e.target.dataset.target, 10));
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  elements.forEach((el) => obs.observe(el));
+}
+
+// =====================================================
+// 9. 3D TILT (cover + module cards follow mouse)
+// =====================================================
+function initTilt() {
+  // Skip on touch devices (no mouse → no tilt)
+  if (window.matchMedia('(hover: none)').matches) return;
+
+  // Cover libro: tilt forte
+  const cover = document.querySelector('.hero-cover img');
+  if (cover) {
+    const wrap = cover.parentElement;
+    wrap.style.perspective = '1200px';
+    cover.style.transformStyle = 'preserve-3d';
+    cover.style.willChange = 'transform';
+
+    wrap.addEventListener('mousemove', (e) => {
+      const rect = wrap.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const rotY = x * 18; // max 18deg
+      const rotX = -y * 18;
+      cover.style.transform = `rotate(0deg) rotateY(${rotY}deg) rotateX(${rotX}deg) scale(1.04)`;
+    });
+    wrap.addEventListener('mouseleave', () => {
+      cover.style.transform = '';
+    });
+  }
+
+  // Module cards: tilt più leggero
+  const modules = document.querySelectorAll('.module');
+  modules.forEach((card) => {
+    card.style.transformStyle = 'preserve-3d';
+    card.style.willChange = 'transform';
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      const rotY = x * 4;
+      const rotX = -y * 4;
+      card.style.transform = `perspective(800px) rotateY(${rotY}deg) rotateX(${rotX}deg) translateY(-2px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+// =====================================================
+// 10. HERO H1 REVEAL — character-by-character fade
+// =====================================================
+function initHeroReveal() {
+  const lines = document.querySelectorAll('.hero h1 .hero-title-1, .hero h1 .hero-title-2');
+  lines.forEach((line, i) => {
+    line.style.opacity = '0';
+    line.style.transform = 'translateY(20px)';
+    line.style.transition = 'opacity 0.8s ease ' + (i * 0.18) + 's, transform 0.8s cubic-bezier(.2,.8,.2,1) ' + (i * 0.18) + 's';
+  });
+  // Trigger on next frame
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      lines.forEach((line) => {
+        line.style.opacity = '1';
+        line.style.transform = 'translateY(0)';
+      });
+    });
+  });
+}
+
+// =====================================================
+// INIT
 // =====================================================
 document.addEventListener('DOMContentLoaded', () => {
   initFadeIn();
@@ -510,4 +653,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initDecoder();
   initAnatomy();
   initMagneticButtons();
+  initScrollProgress();
+  initCounters();
+  initTilt();
+  initHeroReveal();
 });
